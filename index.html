@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Euro Elevator (BD) Ltd. — Precision Vertical Systems Since 2004</title>
+<meta name="description" content="Bangladesh's leading elevator, escalator and power systems company. 1000+ installations across Dhaka, Chittagong, Sylhet and nationwide. Engineering since 2004.">
+<meta property="og:title" content="Euro Elevator (BD) Ltd.">
+<meta property="og:description" content="1000+ installations. 21 years. Elevators, Escalators, Generators. Bangladesh's most trusted vertical systems company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   EURO ELEVATOR BD — AUTHORITY-FIRST SYSTEM v4
+   Presence Architecture · Engineering Interface
+═══════════════════════════════════════════════════════════ */
+:root{
+  --navy:#0A1628;--navy-deep:#060D1A;--blue:#0B4DB8;--blue-dk:#083A8A;
+  --orange:#F28C28;--orange-dk:#D97820;--gray-bg:#F2F4F7;--gray-mid:#E4E8EF;
+  --border:#D0D7E2;--text-dk:#111827;--text-md:#374151;--text-lt:#6B7280;--white:#FFFFFF;
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;color:var(--text-dk);background:var(--white);-webkit-font-smoothing:antialiased;padding-bottom:60px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+input,select,textarea,button{font-family:inherit}
+
+/* ── UTILITIES ── */
+.container{max-width:1280px;margin:0 auto;padding:0 48px}
+.container-tight{max-width:960px;margin:0 auto;padding:0 48px}
+.section-pad{padding:96px 0}
+.section-pad-sm{padding:64px 0}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--orange);flex-shrink:0}
+
+.section-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(34px,4vw,52px);line-height:1.05;color:var(--navy)}
+.section-title .accent{color:var(--blue)}
+.section-title-white{color:#fff}
+.section-desc{margin-top:18px;font-size:16px;color:var(--text-md);line-height:1.78;max-width:560px}
+.section-desc-white{color:rgba(255,255,255,0.68)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;font-size:14px;font-weight:600;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;transition:all 0.18s var(--transition);text-decoration:none;line-height:1;white-space:nowrap}
+.btn svg{flex-shrink:0}
+.btn-orange{background:var(--orange);color:#fff;border-color:var(--orange)}
+.btn-orange:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-1px)}
+.btn-blue{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-blue:hover{background:var(--blue-dk);border-color:var(--blue-dk);transform:translateY(-1px)}
+.btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,0.4)}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+.btn-outline-blue{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn-outline-blue:hover{background:var(--blue);color:#fff}
+.btn-ghost{background:rgba(255,255,255,0.08);color:#fff;border-color:rgba(255,255,255,0.15)}
+.btn-ghost:hover{background:rgba(255,255,255,0.15)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s var(--transition),transform 0.6s var(--transition)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.07s}.reveal-d2{transition-delay:0.14s}.reveal-d3{transition-delay:0.21s}.reveal-d4{transition-delay:0.28s}
+.reveal-left{opacity:0;transform:translateX(-20px);transition:opacity 0.6s var(--transition),transform 0.6s var(--transition)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(20px);transition:opacity 0.6s var(--transition),transform 0.6s var(--transition)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ── PAGE TRANSITION ── */
+#app{animation:pageIn 0.28s var(--transition)}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy-deep);padding:7px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.6)}
+.topbar a{color:rgba(255,255,255,0.6);transition:color 0.15s}
+.topbar a:hover{color:#fff}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:18px}
+.topbar-sep{width:1px;height:12px;background:rgba(255,255,255,0.18)}
+
+/* ── HEADER ── */
+header{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;max-width:1280px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0}
+.nav-logo img{height:36px;width:auto}
+.nav-logo-text{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:17px;color:var(--navy);display:flex;align-items:center;gap:6px}
+.nav-logo-box{background:var(--blue);color:#fff;padding:3px 7px;font-size:13px;letter-spacing:.04em}
+
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links>li>a{padding:8px 13px;font-size:13.5px;font-weight:500;color:var(--text-md);transition:color 0.15s;cursor:pointer;letter-spacing:.01em;position:relative}
+.nav-links>li>a:hover,.nav-links>li>a.active{color:var(--navy);font-weight:600}
+.nav-links>li>a.active::after{content:'';position:absolute;bottom:-1px;left:13px;right:13px;height:2px;background:var(--orange)}
+.has-mega{position:relative}
+.has-mega>a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-left:6px;vertical-align:middle;margin-top:-3px}
+
+/* Mega Menu */
+.mega{display:none;position:absolute;top:calc(100% + 1px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-top:3px solid var(--orange);box-shadow:0 20px 60px rgba(0,0,0,0.13);width:720px;padding:0;z-index:300;border-radius:0 0 4px 4px}
+.has-mega:hover .mega{display:block}
+.mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:8px}
+.mega-item{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:3px;transition:background 0.15s;cursor:pointer}
+.mega-item:hover{background:var(--gray-bg)}
+.mega-icon{width:36px;height:36px;background:rgba(11,77,184,0.08);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mega-icon svg{width:18px;height:18px;stroke:var(--blue);fill:none;stroke-width:2}
+.mega-label{font-size:13px;font-weight:600;color:var(--navy);display:block}
+.mega-sub{font-size:11px;color:var(--text-lt);margin-top:1px;display:block}
+.mega-footer{background:var(--gray-bg);padding:12px 22px;border-top:1px solid var(--border);display:flex;gap:16px;align-items:center;justify-content:space-between;border-radius:0 0 3px 3px}
+.mega-footer-link{font-size:12.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:6px;cursor:pointer;transition:color 0.15s}
+.mega-footer-link:hover{color:var(--orange)}
+
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);transition:all 0.28s var(--transition)}
+
+/* Mobile Menu */
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--white);z-index:500;flex-direction:column;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border)}
+.mobile-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--navy);line-height:1;padding:4px}
+.mobile-links{padding:8px 0}
+.mobile-link{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--navy);border-bottom:1px solid var(--border);cursor:pointer;transition:color 0.15s}
+.mobile-link:hover{color:var(--blue)}
+.mobile-sub{display:none;background:var(--gray-bg);padding:8px 0}
+.mobile-sub.open{display:block}
+.mobile-sub-link{display:block;padding:12px 32px;font-size:14px;font-weight:600;color:var(--text-md);cursor:pointer;transition:color 0.15s}
+.mobile-sub-link:hover{color:var(--blue)}
+.mobile-actions{padding:24px;display:flex;flex-direction:column;gap:12px;margin-top:auto;border-top:1px solid var(--border)}
+
+/* ── PERSISTENT ACTION BAR ── */
+.action-bar{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:stretch;height:60px}
+.action-bar-item{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background 0.15s;border-right:1px solid rgba(255,255,255,0.08);text-decoration:none}
+.action-bar-item:hover{background:rgba(255,255,255,0.06);color:#fff}
+.action-bar-item:last-child{border-right:none;background:var(--orange)}
+.action-bar-item:last-child:hover{background:var(--orange-dk)}
+.action-bar-item svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+.action-bar-item.wa svg{fill:currentColor;stroke:none}
+
+/* ═══ HERO — DOMINANCE STATEMENT ═══ */
+.hero-command{position:relative;min-height:calc(100vh - 100px);display:flex;align-items:flex-end;overflow:hidden;background:var(--navy-deep)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.35;display:block}
+.hero-bg-fallback{width:100%;height:100%;background:linear-gradient(135deg,#0A1628 0%,#0B2F6E 40%,#0A1628 100%)}
+.hero-bg-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,13,26,0.98) 0%,rgba(6,13,26,0.65) 40%,rgba(6,13,26,0.2) 100%)}
+.hero-content{position:relative;z-index:1;padding:0 48px 80px;max-width:1280px;width:100%;margin:0 auto}
+.hero-status{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.hero-status-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 3px rgba(34,197,94,0.2);animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,0.2)}50%{box-shadow:0 0 0 6px rgba(34,197,94,0.1)}}
+.hero-status-text{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.hero-statement{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(52px,8vw,110px);line-height:.95;color:#fff;margin-bottom:0}
+.hero-statement .line-orange{color:var(--orange)}
+.hero-statement .line-dim{color:rgba(255,255,255,0.35);font-size:.55em;letter-spacing:.05em;display:block;margin-top:10px;font-weight:600}
+.hero-meta{display:grid;grid-template-columns:1fr 2px 1fr 2px 1fr 2px 1fr;align-items:center;gap:0;margin-top:56px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.12)}
+.hero-meta-divider{height:36px;background:rgba(255,255,255,0.15)}
+.hero-metric{padding:0 32px}
+.hero-metric-num{font-family:'Rajdhani',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:700;color:var(--orange);line-height:1}
+.hero-metric-label{font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.12em;margin-top:4px}
+.hero-ctas{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
+
+/* Hero scroll indicator */
+.scroll-indicator{position:absolute;bottom:28px;right:48px;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:1}
+.scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--orange),transparent);animation:scrollAnim 2s ease-in-out infinite}
+@keyframes scrollAnim{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(0);transform-origin:bottom}}
+.scroll-text{font-size:9px;letter-spacing:.2em;color:rgba(255,255,255,0.35);text-transform:uppercase;writing-mode:vertical-rl}
+
+/* ═══ OPERATIONAL FOOTPRINT ═══ */
+.footprint{background:var(--white);border-bottom:1px solid var(--border)}
+.footprint-grid{display:grid;grid-template-columns:repeat(5,1fr);border-left:1px solid var(--border)}
+.footprint-cell{padding:36px 28px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background 0.2s}
+.footprint-cell:hover{background:var(--gray-bg)}
+.footprint-num{font-family:'Rajdhani',sans-serif;font-size:clamp(36px,4vw,54px);font-weight:700;color:var(--navy);line-height:1;letter-spacing:-.02em}
+.footprint-num span{color:var(--orange);font-size:.65em;vertical-align:super}
+.footprint-label{font-size:11px;color:var(--text-lt);text-transform:uppercase;letter-spacing:.1em;margin-top:6px;line-height:1.4}
+.footprint-bar{height:2px;margin-top:16px;background:var(--gray-mid)}
+.footprint-bar-fill{height:100%;background:var(--orange);transition:width 1.4s cubic-bezier(0.4,0,0.2,1);width:0}
+
+/* ═══ SELECTED INSTALLATIONS — MAGAZINE STYLE ═══ */
+.installations{background:var(--navy-deep)}
+.installations-header{display:flex;justify-content:space-between;align-items:flex-end;padding:64px 48px 48px;max-width:1280px;margin:0 auto}
+.installations-header h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(28px,3vw,40px);color:#fff;line-height:1.1}
+.installations-count{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+
+.inst-item{display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.inst-item:nth-child(even){direction:rtl}
+.inst-item:nth-child(even)>*{direction:ltr}
+.inst-visual{position:relative;overflow:hidden}
+.inst-visual img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--transition);display:block}
+.inst-item:hover .inst-visual img{transform:scale(1.04)}
+.inst-visual-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.4),transparent)}
+.inst-badge{position:absolute;top:24px;left:24px;background:var(--orange);color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px}
+.inst-ph{width:100%;height:100%;min-height:520px}
+.inst-content{background:#0D1E38;display:flex;flex-direction:column;justify-content:center;padding:60px 64px}
+.inst-num{font-family:'Rajdhani',sans-serif;font-size:80px;font-weight:700;color:rgba(255,255,255,0.04);line-height:1;margin-bottom:-20px;letter-spacing:-.04em}
+.inst-type{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.inst-name{font-family:'Rajdhani',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;line-height:1.1;margin-bottom:16px}
+.inst-meta-row{display:flex;flex-direction:column;gap:8px;margin-bottom:28px}
+.inst-meta-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.55)}
+.inst-meta-dot{width:4px;height:4px;background:var(--orange);border-radius:50%;flex-shrink:0}
+.inst-specs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.08)}
+.inst-spec{padding:12px 14px;border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}
+.inst-spec:nth-child(even){border-right:none}
+.inst-spec-label{font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.inst-spec-val{font-size:14px;font-weight:600;color:#fff}
+
+/* ═══ SYSTEMS GRID ═══ */
+.systems-section{background:var(--white)}
+.systems-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);margin-top:48px}
+.system-tile{border-right:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;cursor:pointer;position:relative;transition:all 0.22s var(--transition)}
+.system-tile:hover{z-index:2;box-shadow:0 8px 40px rgba(0,0,0,0.14)}
+.system-tile:nth-child(4n){border-right:none}
+.system-tile-img{aspect-ratio:4/3;position:relative;overflow:hidden}
+.system-tile-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--transition)}
+.system-tile:hover .system-tile-img img{transform:scale(1.06)}
+.system-tile-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.75) 0%,transparent 55%)}
+.system-tile-badge{position:absolute;top:12px;left:12px;background:var(--orange);color:#fff;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px}
+.system-tile-ph{width:100%;aspect-ratio:4/3}
+.system-tile-body{padding:20px 22px 24px}
+.system-tile-title{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.1}
+.system-tile-sub{font-size:12.5px;color:var(--text-lt);line-height:1.6;margin-bottom:14px}
+.system-tile-tags{display:flex;flex-wrap:wrap;gap:4px}
+.system-tile-tag{font-size:10px;color:var(--text-md);background:var(--gray-bg);padding:3px 9px;border-radius:1px;font-weight:500}
+.system-tile-arrow{position:absolute;bottom:20px;right:20px;width:32px;height:32px;background:var(--blue);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;border-radius:2px}
+.system-tile-arrow svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2.5}
+.system-tile:hover .system-tile-arrow{opacity:1}
+
+/* ═══ SYSTEM CONFIGURATOR ═══ */
+.configurator-section{background:var(--navy);position:relative;overflow:hidden}
+.configurator-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.06) 1px,transparent 1px);background-size:48px 48px;animation:gridDrift 30s linear infinite}
+@keyframes gridDrift{from{background-position:0 0}to{background-position:48px 48px}}
+.configurator-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.4fr;gap:0;min-height:560px}
+.configurator-desc{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,0.08)}
+.configurator-panel{padding:48px 56px;background:rgba(0,0,0,0.25)}
+.cfg-title{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.cfg-title::before{content:'';width:8px;height:8px;background:var(--orange);border-radius:50%}
+.cfg-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:10px}
+.cfg-group{margin-bottom:24px}
+.cfg-options{display:flex;flex-wrap:wrap;gap:6px}
+.cfg-opt{padding:8px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);font-size:12.5px;font-weight:600;cursor:pointer;transition:all 0.15s;border-radius:1px;letter-spacing:.03em}
+.cfg-opt:hover{background:rgba(255,255,255,0.1);color:#fff}
+.cfg-opt.selected{background:var(--orange);border-color:var(--orange);color:#fff}
+.cfg-floor-wrap{display:flex;align-items:center;gap:14px}
+.cfg-floor-input{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:28px;font-family:'Rajdhani',sans-serif;font-weight:700;width:100px;text-align:center;padding:10px;outline:none;-moz-appearance:textfield}
+.cfg-floor-input::-webkit-outer-spin-button,.cfg-floor-input::-webkit-inner-spin-button{-webkit-appearance:none}
+.cfg-floor-btn{width:40px;height:40px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s;font-family:'Rajdhani',sans-serif;font-weight:700}
+.cfg-floor-btn:hover{background:rgba(255,255,255,0.2)}
+.cfg-result{background:rgba(11,77,184,0.15);border:1px solid rgba(11,77,184,0.3);padding:24px;margin-top:28px;min-height:120px}
+.cfg-result-empty{text-align:center;color:rgba(255,255,255,0.3);font-size:13px;padding:16px 0}
+.cfg-result-title{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.cfg-output-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cfg-output-item{background:rgba(255,255,255,0.05);padding:12px}
+.cfg-output-label{font-size:9px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
+.cfg-output-val{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#fff}
+.cfg-result-rec{margin-top:12px;padding:12px 14px;background:var(--orange);color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:background 0.15s}
+.cfg-result-rec:hover{background:var(--orange-dk)}
+
+/* ═══ SOLUTIONS (CLIENT SEGMENTATION) ═══ */
+.solutions-section{background:var(--gray-bg)}
+.solutions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:48px}
+.sol-card{position:relative;overflow:hidden;cursor:pointer;min-height:320px;display:flex;align-items:flex-end}
+.sol-bg{position:absolute;inset:0;z-index:0}
+.sol-bg img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s var(--transition)}
+.sol-card:hover .sol-bg img{transform:scale(1.05)}
+.sol-bg-color{width:100%;height:100%}
+.sol-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.92) 0%,rgba(10,22,40,0.4) 50%,rgba(10,22,40,0.15) 100%);transition:opacity 0.3s}
+.sol-card:hover .sol-overlay{opacity:0.95}
+.sol-content{position:relative;z-index:1;padding:32px 36px;width:100%}
+.sol-category{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.sol-title{font-family:'Rajdhani',sans-serif;font-size:clamp(22px,2.5vw,30px);font-weight:700;color:#fff;line-height:1.1;margin-bottom:10px}
+.sol-items{display:flex;flex-wrap:wrap;gap:6px;opacity:0;transform:translateY(8px);transition:all 0.25s 0.05s}
+.sol-card:hover .sol-items{opacity:1;transform:translateY(0)}
+.sol-item{font-size:11px;color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.1);padding:4px 10px;border-radius:1px;font-weight:500}
+.sol-arrow{position:absolute;top:28px;right:28px;width:38px;height:38px;background:var(--orange);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;z-index:1}
+.sol-card:hover .sol-arrow{opacity:1}
+.sol-arrow svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5}
+
+/* ═══ DOWNLOAD CENTER ═══ */
+.download-section{background:var(--white)}
+.download-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.dl-card{border:1px solid var(--border);padding:28px;border-radius:2px;transition:all 0.2s;cursor:pointer;position:relative;overflow:hidden}
+.dl-card::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:var(--blue);transform:scaleY(0);transform-origin:bottom;transition:transform 0.25s var(--transition)}
+.dl-card:hover{box-shadow:0 6px 28px rgba(0,0,0,0.09);transform:translateY(-2px)}
+.dl-card:hover::before{transform:scaleY(1)}
+.dl-icon{width:48px;height:48px;background:rgba(11,77,184,0.08);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.dl-icon svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:2}
+.dl-title{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.dl-desc{font-size:13px;color:var(--text-md);line-height:1.6;margin-bottom:16px}
+.dl-files{display:flex;flex-direction:column;gap:6px}
+.dl-file{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--blue);font-weight:500;transition:color 0.15s}
+.dl-file:hover{color:var(--orange)}
+.dl-file svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
+
+/* ═══ BANGLADESH MAP ═══ */
+.map-section{background:var(--navy)}
+.map-section .section-title{color:#fff}
+.map-section .eyebrow{color:var(--orange)}
+.map-wrap{position:relative;margin-top:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.08)}
+.bd-map-container{background:rgba(255,255,255,0.03);padding:32px;display:flex;align-items:center;justify-content:center}
+.bd-map-svg{max-width:420px;width:100%}
+.bd-map-svg path{fill:rgba(11,77,184,0.2);stroke:rgba(11,77,184,0.4);stroke-width:0.8;cursor:pointer;transition:fill 0.2s}
+.bd-map-svg path:hover,.bd-map-svg path.active-div{fill:rgba(11,77,184,0.45)}
+.map-pin{cursor:pointer}
+.map-pin circle{fill:var(--orange);transition:r 0.2s}
+.map-pin:hover circle{r:8}
+.map-pin text{fill:#fff;font-size:6px;font-family:'Inter',sans-serif;font-weight:700;pointer-events:none}
+.map-cities{background:rgba(0,0,0,0.2);padding:36px;display:flex;flex-direction:column;gap:0;overflow-y:auto;max-height:480px}
+.map-city{padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;transition:padding 0.2s}
+.map-city:hover{padding-left:6px}
+.map-city-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
+.map-city-count{font-size:12px;color:rgba(255,255,255,0.45);letter-spacing:.06em}
+.map-city-bar{height:2px;margin-top:10px;background:rgba(255,255,255,0.1)}
+.map-city-bar-fill{height:100%;background:var(--orange);transition:width 1.2s var(--transition);width:0}
+
+/* ═══ INNER PAGES ═══ */
+.page-hero{background:var(--navy-deep);position:relative;overflow:hidden;padding:80px 0 64px}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.07) 1px,transparent 1px);background-size:44px 44px}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--orange),var(--blue))}
+.page-hero .container{position:relative;z-index:1}
+.page-hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+.page-hero-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(40px,5vw,68px);color:#fff;line-height:1.0;margin-bottom:16px}
+.page-hero-desc{font-size:16px;color:rgba(255,255,255,0.6);max-width:600px;line-height:1.78}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-top:24px;font-size:12.5px;color:rgba(255,255,255,0.4)}
+.breadcrumb span{cursor:pointer;transition:color 0.15s}.breadcrumb span:hover{color:var(--orange)}.breadcrumb-sep{opacity:.4}
+
+/* Product Detail */
+.product-masthead{background:var(--navy-deep);position:relative;overflow:hidden;padding:0}
+.product-masthead-inner{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.product-masthead-content{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.product-masthead-content::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.07) 1px,transparent 1px);background-size:44px 44px;z-index:-1}
+.product-masthead-visual{position:relative;overflow:hidden}
+.product-masthead-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.product-masthead-visual-ph{width:100%;height:100%;min-height:500px}
+.product-badge{display:inline-block;background:var(--orange);color:#fff;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;margin-bottom:20px}
+.product-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(38px,4.5vw,60px);color:#fff;line-height:1.0;margin-bottom:16px}
+.product-desc{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.82;margin-bottom:28px}
+.product-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:32px}
+.product-tag{padding:5px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);color:rgba(255,255,255,0.75);font-size:12px;font-weight:500;border-radius:1px}
+.product-ctas{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Spec System */
+.spec-section{background:var(--white)}
+.spec-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table tbody tr:nth-child(odd) td{background:var(--gray-bg)}
+.spec-table td{padding:13px 16px;font-size:14px;border-bottom:1px solid var(--border);vertical-align:top}
+.spec-table td:first-child{font-weight:600;color:var(--navy);width:42%;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+.spec-table td:last-child{color:var(--text-md)}
+.spec-features{display:flex;flex-direction:column;gap:12px}
+.spec-feat{border-left:3px solid var(--orange);padding:14px 18px;background:var(--gray-bg);border-radius:0 2px 2px 0}
+.spec-feat-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.spec-feat-desc{font-size:13px;color:var(--text-md);line-height:1.65}
+
+/* Solutions Detail */
+.sol-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:48px;border:1px solid var(--border)}
+.sol-detail-item{padding:32px 36px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background 0.2s;cursor:default}
+.sol-detail-item:hover{background:var(--gray-bg)}
+.sol-detail-item:nth-child(even){border-right:none}
+.sol-detail-icon{width:48px;height:48px;background:rgba(11,77,184,0.08);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.sol-detail-icon svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:2}
+.sol-detail-title{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.sol-detail-desc{font-size:13.5px;color:var(--text-md);line-height:1.68}
+
+/* About */
+.timeline-wrap{position:relative;padding:48px 0;margin-top:12px}
+.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--orange),var(--blue));transform:translateX(-50%)}
+.tl-item{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;margin-bottom:36px;align-items:start}
+.tl-content{padding-bottom:8px}
+.tl-item:nth-child(odd) .tl-content{grid-column:1;text-align:right;padding-right:40px}
+.tl-item:nth-child(odd) .tl-center{grid-column:2}
+.tl-item:nth-child(odd) .tl-empty{grid-column:3}
+.tl-item:nth-child(even) .tl-empty{grid-column:1}
+.tl-item:nth-child(even) .tl-center{grid-column:2}
+.tl-item:nth-child(even) .tl-content{grid-column:3;text-align:left;padding-left:40px}
+.tl-dot{width:14px;height:14px;background:var(--orange);border-radius:50%;margin:4px auto;border:3px solid #fff;box-shadow:0 0 0 3px rgba(242,140,40,0.3)}
+.tl-year{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--orange);margin-bottom:6px}
+.tl-event{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.2}
+.tl-detail{font-size:12.5px;color:var(--text-md);line-height:1.62}
+
+/* Progress */
+.progress-row{display:grid;grid-template-columns:70px 1fr 50px;gap:14px;align-items:center;margin-bottom:14px}
+.progress-year{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;color:var(--navy)}
+.progress-track{background:var(--gray-mid);height:8px;border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--orange));width:0;transition:width 1.2s cubic-bezier(0.4,0,0.2,1)}
+.progress-pct{font-size:12px;font-weight:600;color:var(--blue);text-align:right}
+
+/* Certs */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.cert-card{background:var(--white);border:1px solid var(--border);padding:28px;border-radius:2px;text-align:center;transition:all 0.2s}
+.cert-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}
+.cert-icon{width:52px;height:52px;margin:0 auto 14px;background:rgba(11,77,184,0.08);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.cert-icon svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:2}
+.cert-title{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.cert-desc{font-size:12.5px;color:var(--text-md);line-height:1.62}
+
+/* Projects Page */
+.proj-page-filter{display:flex;gap:6px;flex-wrap:wrap}
+.proj-filter-btn{padding:8px 20px;font-size:12.5px;font-weight:600;letter-spacing:.04em;border:1.5px solid var(--border);background:var(--white);color:var(--text-md);cursor:pointer;transition:all 0.18s;border-radius:1px;font-family:'Inter',sans-serif}
+.proj-filter-btn:hover{border-color:var(--blue);color:var(--blue)}
+.proj-filter-btn.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.proj-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.proj-page-card{border:1px solid var(--border);border-radius:2px;overflow:hidden;cursor:pointer;transition:all 0.22s}
+.proj-page-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1)}
+.proj-page-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.proj-page-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--transition);display:block}
+.proj-page-card:hover .proj-page-img img{transform:scale(1.06)}
+.proj-page-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.65) 0%,transparent 60%)}
+.proj-page-tag{position:absolute;top:12px;left:12px;background:var(--orange);color:#fff;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px}
+.proj-page-img-ph{width:100%;aspect-ratio:16/10}
+.proj-page-body{padding:18px 20px}
+.proj-page-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.2}
+.proj-page-meta{font-size:12px;color:var(--text-lt);display:flex;gap:10px;flex-wrap:wrap}
+
+/* Contact */
+.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;margin-top:48px;align-items:start}
+.contact-info-block{background:var(--white);border:1px solid var(--border);padding:32px;margin-bottom:16px}
+.contact-info-block-title{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.contact-info-block-title svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;flex-shrink:0}
+.contact-detail{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start}
+.contact-detail svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px}
+.contact-detail-text{font-size:14px;color:var(--text-md);line-height:1.62}
+.contact-detail-text strong{display:block;font-weight:600;color:var(--navy);margin-bottom:2px}
+.office-tabs{display:flex;gap:0;border:1px solid var(--border);margin-bottom:20px}
+.office-tab{flex:1;padding:10px;text-align:center;font-size:12.5px;font-weight:600;cursor:pointer;transition:all 0.18s;background:var(--white);color:var(--text-md);border-right:1px solid var(--border)}
+.office-tab:last-child{border-right:none}.office-tab.active{background:var(--navy);color:#fff}
+.map-embed{border:1px solid var(--border);overflow:hidden;border-radius:1px;margin-top:12px}
+.map-embed iframe{width:100%;height:200px;border:none;display:block}
+.contact-form-wrap{background:var(--white);border:1px solid var(--border);padding:40px}
+.contact-form-title{font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.contact-form-sub{font-size:13.5px;color:var(--text-lt);margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+
+/* Form elements */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:11px;font-weight:700;color:var(--text-md);text-transform:uppercase;letter-spacing:.08em}
+.form-group input,.form-group select,.form-group textarea{padding:11px 14px;border:1.5px solid var(--border);font-size:14px;font-family:'Inter',sans-serif;color:var(--text-dk);background:var(--white);transition:border-color 0.15s;outline:none;-webkit-appearance:none;border-radius:1px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(11,77,184,0.08)}
+.form-group textarea{resize:vertical;min-height:96px}
+.form-actions{margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
+.form-success{text-align:center;padding:40px 24px}
+.form-success-icon{width:56px;height:56px;background:rgba(22,163,74,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.form-success-icon svg{width:28px;height:28px;stroke:#16a34a;fill:none;stroke-width:2.5}
+.form-success h3{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.form-success p{font-size:14px;color:var(--text-md);line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);padding:72px 0 0;color:rgba(255,255,255,0.6)}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 48px}
+.footer-top{display:grid;grid-template-columns:2.4fr 1fr 1fr 1fr;gap:56px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.footer-brand-logo{height:34px;width:auto;margin-bottom:18px;opacity:0.88}
+.footer-brand-name{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:18px;display:none}
+.footer-desc{font-size:13px;line-height:1.82;color:rgba(255,255,255,0.48);max-width:290px;margin-bottom:24px}
+.footer-social{display:flex;gap:8px}
+.social-btn{width:34px;height:34px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:rgba(255,255,255,0.55);border-radius:2px}
+.social-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.social-btn svg{width:15px;height:15px;fill:currentColor}
+.footer-col-title{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.48);transition:color 0.15s;display:flex;align-items:center;gap:6px;cursor:pointer}
+.footer-links a:hover{color:var(--orange)}
+.footer-links a::before{content:'›';color:rgba(242,140,40,0.6);font-size:14px;line-height:1}
+.footer-hours-box{margin-top:20px;padding:13px 15px;background:rgba(242,140,40,0.1);border:1px solid rgba(242,140,40,0.2);border-radius:1px}
+.footer-hours-title{font-size:10px;font-weight:700;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.footer-hours-text{font-size:12px;color:rgba(255,255,255,0.58);line-height:1.6}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:12px;color:rgba(255,255,255,0.28);flex-wrap:wrap;gap:8px}
+
+/* WhatsApp Float */
+.float-wa{position:fixed;bottom:76px;right:24px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);z-index:350;transition:transform 0.22s,box-shadow 0.22s}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
+.float-wa svg{width:26px;height:26px;fill:#fff}
+
+/* Scrollbar */
+/* ── MANAGEMENT TEAM ── */
+@media(max-width:900px){
+  [style*="grid-template-columns:repeat(4,1fr)"]:has(.contact-detail){grid-template-columns:1fr 1fr!important}
+}
+
+/* ── GALLERY ── */
+.gallery-item{border-radius:2px}
+.gallery-item img{display:block}
+
+
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--gray-bg)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1100px){
+  .container,.nav-wrap,.footer-inner{padding:0 24px}
+  footer{padding-left:0;padding-right:0}
+  .systems-grid{grid-template-columns:repeat(2,1fr)}
+  .system-tile:nth-child(4n){border-right:1px solid var(--border)}
+  .system-tile:nth-child(2n){border-right:none}
+  .footprint-grid{grid-template-columns:repeat(3,1fr)}
+  .inst-item{grid-template-columns:1fr}
+  .inst-item:nth-child(even){direction:ltr}
+  .inst-visual{aspect-ratio:16/9}
+  .inst-content{padding:36px 32px}
+  .configurator-inner{grid-template-columns:1fr}
+  .product-masthead-inner{grid-template-columns:1fr}
+  .product-masthead-visual{display:none}
+  .spec-layout{grid-template-columns:1fr}
+  .solutions-grid{grid-template-columns:1fr 1fr}
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .download-grid{grid-template-columns:1fr 1fr}
+  .contact-layout{grid-template-columns:1fr}
+  .proj-page-grid{grid-template-columns:1fr 1fr}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:0;border-top:none}
+  .hero-meta-divider{display:none}
+  .hero-metric{padding:16px;border:1px solid rgba(255,255,255,0.08)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .nav-links,.nav-actions{display:none}
+  .hamburger{display:flex}
+  .map-wrap{grid-template-columns:1fr}
+  .bd-map-container{display:none}
+  .hero-content{padding:0 24px 80px}
+  .installations-header{padding:48px 24px 36px}
+  .sol-detail-grid{grid-template-columns:1fr}
+  .sol-detail-item:nth-child(even){border-right:1px solid var(--border)}
+  .contact-form-wrap{padding:28px 20px}
+}
+@media(max-width:680px){
+  .hero-statement{font-size:clamp(44px,12vw,68px)}
+  .hero-meta{grid-template-columns:1fr 1fr}
+  .systems-grid{grid-template-columns:1fr}
+  .system-tile:nth-child(n){border-right:none}
+  .footprint-grid{grid-template-columns:1fr 1fr}
+  .solutions-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .download-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .topbar{display:none}
+  .footer-top{grid-template-columns:1fr}
+  .proj-page-grid{grid-template-columns:1fr}
+  .timeline-line{display:none}
+  .tl-item{grid-template-columns:1fr}
+  .tl-item>*:not(.tl-content){display:none}
+  .tl-item:nth-child(odd) .tl-content,.tl-item:nth-child(even) .tl-content{grid-column:1;text-align:left;padding:0 0 24px}
+  .action-bar-item span{display:none}
+  .action-bar-item svg{width:20px;height:20px}
+  .hero-ctas{gap:8px}
+  .hero-ctas .btn{padding:11px 18px;font-size:13px}
+  .inst-num{font-size:50px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="mailto:info@euroelevator-bd.com">info@euroelevator-bd.com</a>
+    <span class="topbar-sep"></span>
+    <a href="tel:+8801817291551">Hotline: 01817-291551 &amp; 01817-291554</a>
+  </div>
+  <div class="topbar-right">
+    <span>Sat–Thu: 9AM–5PM</span>
+    <span class="topbar-sep"></span>
+    <a href="https://www.facebook.com/euroelevatorbd" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com/@euroelevatorbdltd1709" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/euroelevatorbd" target="_blank">Instagram</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="nav-wrap">
+    <div class="nav-logo" onclick="nav('home')">
+      <img src="https://www.euroelevator-bd.com/wp-content/uploads/2024/09/EURO-LOGO-2024.png" alt="Euro Elevator BD" id="logo-img" onerror="this.style.display='none';document.getElementById('logo-text').style.display='flex'">
+      <div class="nav-logo-text" id="logo-text" style="display:none"><span class="nav-logo-box">EURO</span>ELEVATOR BD</div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a data-page="home" onclick="nav('home')" class="nav-a">Home</a></li>
+      <li class="has-mega">
+        <a data-page="systems" class="nav-a">Systems</a>
+        <div class="mega">
+          <div class="mega-inner">
+            <div class="mega-item" onclick="nav('systems/passenger-elevator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="1"/><polyline points="9 8 12 5 15 8"/><polyline points="9 16 12 19 15 16"/></svg></div><div><span class="mega-label">Passenger Elevator</span><span class="mega-sub">Residential & Commercial</span></div></div>
+            <div class="mega-item" onclick="nav('systems/panoramic-elevator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg></div><div><span class="mega-label">Panoramic Elevator</span><span class="mega-sub">Glass & Architectural</span></div></div>
+            <div class="mega-item" onclick="nav('systems/hospital-elevator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><div><span class="mega-label">Hospital / Bed Lift</span><span class="mega-sub">Healthcare certified</span></div></div>
+            <div class="mega-item" onclick="nav('systems/cargo-elevator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><div><span class="mega-label">Cargo / Freight Elevator</span><span class="mega-sub">Industrial grade</span></div></div>
+            <div class="mega-item" onclick="nav('systems/home-lift')"><div class="mega-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><span class="mega-label">Home / Villa Lift</span><span class="mega-sub">Compact & luxury</span></div></div>
+            <div class="mega-item" onclick="nav('systems/escalator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4"/><polyline points="16 4 20 4 20 8"/><polyline points="4 16 4 20 8 20"/></svg></div><div><span class="mega-label">Escalator</span><span class="mega-sub">High-volume flow</span></div></div>
+            <div class="mega-item" onclick="nav('systems/generator')"><div class="mega-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><span class="mega-label">Generator</span><span class="mega-sub">15–3000 kVA backup</span></div></div>
+          </div>
+          <div class="mega-footer">
+            <span class="mega-footer-link" onclick="nav('systems')">View all systems →</span>
+            <span class="mega-footer-link" onclick="nav('configurator')">⚙ System Configurator</span>
+            <span class="mega-footer-link" onclick="nav('downloads')">↓ Download Catalogues</span>
+          </div>
+        </div>
+      </li>
+      <li><a data-page="installations" onclick="nav('installations')" class="nav-a">Installations</a></li>
+      <li><a data-page="solutions" onclick="nav('solutions')" class="nav-a">Solutions</a></li>
+      <li><a data-page="about" onclick="nav('about')" class="nav-a">Company</a></li>
+      <li><a data-page="contact" onclick="nav('contact')" class="nav-a">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://wa.me/8801817291551" target="_blank" class="btn btn-ghost" style="padding:9px 16px;font-size:12.5px;background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.3);color:#25D366;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366" style="stroke:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a onclick="nav('contact')" class="btn btn-orange" style="padding:9px 20px;font-size:13px;cursor:pointer;">Request Proposal</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-header">
+    <div class="nav-logo-text" style="display:flex"><span class="nav-logo-box">EURO</span>ELEVATOR BD</div>
+    <button class="mobile-close" onclick="toggleMobile()">✕</button>
+  </div>
+  <div class="mobile-links">
+    <div class="mobile-link" onclick="mobileNav('home')">Home</div>
+    <div class="mobile-link" onclick="this.nextElementSibling.classList.toggle('open')">Systems <span>▾</span></div>
+    <div class="mobile-sub">
+      <span class="mobile-sub-link" onclick="mobileNav('systems/passenger-elevator')">Passenger Elevator</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/panoramic-elevator')">Panoramic Elevator</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/hospital-elevator')">Hospital / Bed Lift</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/cargo-elevator')">Cargo / Freight</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/home-lift')">Home / Villa Lift</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/escalator')">Escalator</span>
+      <span class="mobile-sub-link" onclick="mobileNav('systems/generator')">Generator</span>
+    </div>
+    <div class="mobile-link" onclick="mobileNav('installations')">Installations</div>
+    <div class="mobile-sub-link" style="display:block;padding:12px 32px;font-size:14px;font-weight:600;color:var(--text-md);cursor:pointer;border-bottom:1px solid var(--border);" onclick="mobileNav('gallery')">📷 Photo Gallery</div>
+    <div class="mobile-link" onclick="mobileNav('solutions')">Solutions</div>
+    <div class="mobile-link" onclick="mobileNav('configurator')">System Configurator</div>
+    <div class="mobile-link" onclick="mobileNav('about')">Company</div>
+    <div class="mobile-link" onclick="mobileNav('contact')">Contact</div>
+  </div>
+  <div class="mobile-actions">
+    <a href="tel:+8801817291551" class="btn btn-blue" style="justify-content:center;">📞 01817-291551</a>
+    <a href="https://wa.me/8801817291551" class="btn btn-orange" style="justify-content:center;background:#25D366;border-color:#25D366;" target="_blank">WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <img class="footer-brand-logo" src="https://www.euroelevator-bd.com/wp-content/uploads/2024/09/EURO-LOGO-2024.png" alt="Euro Elevator BD" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-name">EURO ELEVATOR BD</div>
+        <p class="footer-desc">Bangladesh's trusted engineering company for elevator, escalator, and generator supply, installation, and maintenance. Serving the nation since April 2004.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/euroelevatorbd" class="social-btn" target="_blank"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@euroelevatorbdltd1709" class="social-btn" target="_blank"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="https://www.instagram.com/euroelevatorbd" class="social-btn" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://twitter.com/bd_euro" class="social-btn" target="_blank"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Systems</div>
+        <ul class="footer-links">
+          <li><a onclick="nav('systems/passenger-elevator')">Passenger Elevator</a></li>
+          <li><a onclick="nav('systems/panoramic-elevator')">Panoramic Elevator</a></li>
+          <li><a onclick="nav('systems/home-lift')">Home / Villa Lift</a></li>
+          <li><a onclick="nav('systems/hospital-elevator')">Hospital / Bed Lift</a></li>
+          <li><a onclick="nav('systems/cargo-elevator')">Cargo / Freight</a></li>
+          <li><a onclick="nav('systems/escalator')">Escalator</a></li>
+          <li><a onclick="nav('systems/generator')">Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a onclick="nav('about')">About Us</a></li>
+          <li><a onclick="nav('installations')">Installations</a></li>
+          <li><a onclick="nav('solutions')">Solutions</a></li>
+          <li><a onclick="nav('configurator')">System Configurator</a></li>
+          <li><a onclick="nav('downloads')">E-Catalogues</a></li>
+          <li><a href="https://www.euroelevator-bd.com/gallery/" target="_blank">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:+8801817291551">Hotline: 01817-291551</a></li>
+          <li><a href="tel:+880241091241">Office: +88 02 41091241</a></li>
+          <li><a href="mailto:info@euroelevator-bd.com">info@euroelevator-bd.com</a></li>
+          <li><a href="mailto:sales@euroelevator-bd.com">sales@euroelevator-bd.com</a></li>
+          <li><a onclick="nav('contact')">Request Quotation</a></li>
+        </ul>
+        <div class="footer-hours-box">
+          <div class="footer-hours-title">Office Hours</div>
+          <div class="footer-hours-text">Sat–Thu: 9:00 AM – 5:00 PM<br>Emergency: 24/7 Hotline</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Euro Elevator (BD) Ltd. All rights reserved. Trademark Registered.</span>
+      <span>Elevating Bangladesh Since April 2004</span>
+    </div>
+  </div>
+</footer>
+
+<!-- PERSISTENT ACTION BAR -->
+<div class="action-bar">
+  <a class="action-bar-item" href="tel:+8801817291551">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call Hotline</span>
+  </a>
+  <a class="action-bar-item wa" href="https://wa.me/8801817291551" target="_blank" style="color:#25D366;">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+  <a class="action-bar-item" onclick="nav('configurator')" style="cursor:pointer;">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M2 12h2M22 12h-2M12 20v2M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41"/></svg>
+    <span>Configurator</span>
+  </a>
+  <a class="action-bar-item" onclick="nav('contact')" style="cursor:pointer;">
+    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    <span>Get Proposal</span>
+  </a>
+</div>
+
+<a href="https://wa.me/8801817291551" class="float-wa" target="_blank" title="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   EURO ELEVATOR BD — SPA ENGINE v5
+   Authority-First · Image-Accurate · Bug-Fixed
+══════════════════════════════════════════════════════════ */
+
+/* ── DATA LAYER ── */
+const SYSTEMS = {
+  'passenger-elevator':{name:'Passenger Elevator',badge:'Elevator',tagline:'Precision transport for every building height',desc:'Euro Elevator passenger systems are engineered for reliability, ride comfort, and energy efficiency. Deployed across residential towers, corporate offices, government buildings, and hospitals. Direct supply from certified manufacturers in Turkey and China with full AMC support.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/Turkey-Lift-3.jpg',gradient:'linear-gradient(135deg,#0A1628,#0B4DB8)',tags:['Residential','Commercial','Government','Mixed-Use'],specs:[['Load Capacity','320 kg – 2,000 kg'],['Speed','0.5 – 2.5 m/s'],['Cab Finish','Stainless / Titanium / Mirror / Custom'],['Drive System','VVVF Gearless / Geared'],['Control','Microprocessor Duplex / Group Control'],['Door Type','Auto Side / Centre Opening'],['Floor Range','2 – 40 floors'],['Machine Room','MRL (Machine Room Less) available'],['Power Supply','3-Phase 380V / 50Hz'],['Standards','EN 81-20/50 · BNBC Compliant']],features:[{t:'VVVF Energy Drive',d:'Variable Voltage Variable Frequency drive reduces energy consumption by up to 30% vs conventional systems.'},{t:'Auto Rescue Device (ARD)',d:'Battery-powered rescue system safely returns cab to nearest floor during power failure within 60 seconds.'},{t:'Intelligent Group Control',d:'AI-based dispatching algorithm minimises waiting time across multi-elevator buildings.'},{t:'Floor Levelling Precision',d:'Advanced levelling stops within ±3mm of floor level — eliminating trip hazards.'},{t:'Anti-Nuisance Logic',d:'Detects and cancels mischievous floor calls, reducing unnecessary stops and energy waste.'},{t:'Overload Protection',d:'Precision load cell prevents departure with audio-visual alarm when capacity exceeded.'}],useCases:['High-Rise Residential','Corporate Office Tower','Government Building','Hotel & Hospitality','Shopping Complex','Educational Institution']},
+  'panoramic-elevator':{name:'Panoramic Elevator',badge:'Elevator',tagline:'Architectural glass — where engineering becomes design',desc:'Our panoramic elevators transform vertical movement into an architectural statement. Glass cab systems installed in luxury hotels, shopping atria, and premium commercial spaces where engineering precision meets visual identity. Sourced from Turkish manufacturers with European CE certification.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/Turkey-Lift-5.jpg',gradient:'linear-gradient(135deg,#0A1628,#1e3a5f)',tags:['Hotels','Shopping Malls','Premium Commercial','Showrooms'],specs:[['Load Capacity','480 kg – 1,250 kg'],['Speed','0.5 – 1.75 m/s'],['Cab Design','Full Glass / Semi-Glass / Custom'],['Drive System','VVVF Gearless (silent)'],['Visibility','180° or 360° panoramic'],['Door Type','Auto Centre Opening'],['Floor Range','2 – 20 floors'],['Shaft','Structural or Free-Standing Tower'],['Lighting','LED Ambient with Dimmer'],['Standards','EN 81-20/50 Compliant']],features:[{t:'Architectural Glass Panels',d:'Tempered laminated safety glass with anti-reflection coating for maximum transparency and safety.'},{t:'Whisper-Quiet Gearless',d:'Gearless drive operates at < 50 dB — essential for luxury and hospitality environments.'},{t:'Custom Cab Geometry',d:'Circular, oval, rectangular, hexagonal and custom profiles to match architectural design intent.'},{t:'LED Mood Lighting',d:'Programmable RGB LED system with scene presets, dimmable via building management system.'},{t:'Integrated Premium Handrails',d:'Stainless steel or brass handrail systems factory-fitted with glass panels.'},{t:'Free-Standing Tower Option',d:'Self-supporting steel tower structure — no building shaft required for retrofit installations.'}],useCases:['Luxury Hotel Lobby','Shopping Atrium','Premium Office Tower','Showroom & Retail','Convention Centre','Residential Penthouse']},
+  'hospital-elevator':{name:'Hospital / Bed Lift',badge:'Elevator',tagline:'Healthcare-grade vertical transport',desc:'Designed exclusively for clinical environments. Accommodates full-size medical beds, wheelchairs, and equipment. Built to EN 81-70/76 for evacuation compliance and infection control. Deployed in hospitals, clinics, and care homes nationwide.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image230.jpg',gradient:'linear-gradient(135deg,#0A1628,#064e6e)',tags:['Hospitals','Clinics','Care Homes','Medical Centres'],specs:[['Load Capacity','1,000 kg – 2,500 kg'],['Cab Depth','2,700 mm minimum (full-bed)'],['Speed','0.5 – 1.0 m/s'],['Door Clear Width','1,100 – 1,400 mm'],['Interior Finish','Antibacterial stainless steel'],['Control Panel','Low-height + stretcher-level'],['Emergency','Battery ARD + fire recall'],['Standards','EN 81-70 · EN 81-76 · BNBC']],features:[{t:'Extra-Wide Evacuation Doors',d:'Clear door widths of 1,100–1,400mm for full hospital bed, stretcher and medical trolley passage.'},{t:'Antibacterial Surfaces',d:'All interior surfaces coated with antibacterial treatment — reduces cross-contamination risk by 99.9%.'},{t:'EN 81-76 Evacuation Mode',d:'Fire-evacuation mode brings all lifts to designated floor and holds doors open for patient evacuation.'},{t:'Ultra-Smooth Levelling',d:'Precision levelling within ±2mm prevents patient discomfort and IV-line displacement during transport.'},{t:'Emergency UPS Power',d:'Integrated UPS battery system ensures continued operation during power failures — critical for ICU floors.'},{t:'Infection Control Design',d:'No horizontal surfaces, coved corners and sealed door frames minimise dust collection and bacterial harbourage.'}],useCases:['General Hospitals','Specialist Clinics','Nursing Homes','Dialysis Centres','Medical Research','Rehabilitation Facilities']},
+  'cargo-elevator':{name:'Cargo / Freight Elevator',badge:'Elevator',tagline:'Heavy-duty industrial load transportation',desc:'Engineered for manufacturing, logistics, and commercial environments requiring movement of heavy goods, machinery, or vehicles. Built for high-frequency, maximum-load operation with reinforced structural design. Deployed in factories, warehouses, and garment manufacturing facilities.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png',gradient:'linear-gradient(135deg,#0A1628,#3d2000)',tags:['Warehouses','Factories','Garments','Car Parking'],specs:[['Load Capacity','1,000 kg – 10,000 kg'],['Speed','0.25 – 0.63 m/s'],['Platform Size','Custom — up to 5m × 3m'],['Drive System','Hydraulic or VVVF Traction'],['Door Type','Bi-fold / Collapsible Gate / Manual'],['Floor Finish','Chequer plate steel (forklift rated)'],['Floor Range','2 – 20 stops'],['Duty Class','S3–S5 Heavy Duty Cycle']],features:[{t:'Forklift-Ready Platform',d:'Chequer plate steel flooring rated for full forklift entry. Platform structurally designed for eccentric loading.'},{t:'Custom Payload up to 10 Tonnes',d:'Structural design accommodates payloads up to 10,000 kg with engineered safety factor of 1.5×.'},{t:'Industrial Bi-Fold Doors',d:'Wide-clearance bi-fold or collapsible gates with electric operation and safety interlock on all levels.'},{t:'S5 Heavy Duty Rating',d:'Capable of up to 40% on-time operation — suited for continuous production line environments.'},{t:'Overload Sensor & Alarm',d:'Precision load cell prevents departure with audible and visual alarms when rated capacity is exceeded.'},{t:'Hydraulic Option for Low Rise',d:'Hydraulic drive for 2–5 stop applications — no overhead machine room, ideal for constrained sites.'}],useCases:['Garment Factories','Warehouses & Logistics','Multi-Level Car Parking','Cold Storage','Industrial Plants','Retail Stockrooms']},
+  'home-lift':{name:'Home / Villa Lift',badge:'Elevator',tagline:'Luxury private lifts for modern residences',desc:'Euro Elevator home and villa lifts bring mobility and elegance to private residences. Space-efficient engineering with premium interior options — integrated into your home architecture without compromise. Operates on standard household power supply.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image222.jpg',gradient:'linear-gradient(135deg,#0A1628,#1a3d0f)',tags:['Residential','Duplex','Villa','Private'],specs:[['Load Capacity','200 kg – 400 kg'],['Speed','0.15 – 0.5 m/s'],['Shaft Footprint','700×900 mm minimum'],['Drive System','Hydraulic / Chain / Screw'],['Door Type','Manual or Auto Swing/Sliding'],['Power Supply','220V Single Phase'],['Floor Range','2 – 6 stops'],['Operating Noise','< 45 dB']],features:[{t:'Single-Phase Household Power',d:'Operates on standard 220V — no separate power line or transformer required.'},{t:'Minimal Shaft Requirement',d:'Some models require as little as 900×900mm floor footprint — installable in existing stairwells.'},{t:'Premium Interior Finishes',d:'Wood panelling, mirror walls, leather handrails, LED mood lighting — fully customisable.'},{t:'Ultra-Silent Drive',d:'Screw and chain drives operate at < 45 dB — quieter than normal conversation.'},{t:'Safety Door Interlock',d:'Mechanical door interlock prevents access at any floor unless cab is present and level.'},{t:'Low Maintenance Design',d:'Sealed lubrication points and long-life components designed for 20+ year service life.'}],useCases:['Private Residence','Duplex Apartment','Villa','Townhouse','Small Private Clinic','Boutique Commercial']},
+  'escalator':{name:'Escalator',badge:'Escalator',tagline:'Continuous flow — high-volume people movement',desc:'Euro Elevator supplies and installs commercial escalators for shopping malls, airports, metro stations, and public spaces. Direct sourcing from EN 115-certified manufacturers with full installation and AMC support. 30+ units successfully deployed across Bangladesh.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image215-1.jpg',gradient:'linear-gradient(135deg,#0A1628,#083A8A)',tags:['Shopping Malls','Airports','Metro','Public Buildings'],specs:[['Step Width','600 mm / 800 mm / 1,000 mm'],['Inclination','30° or 35°'],['Speed','0.5 m/s'],['Rise Height','Up to 10 m per unit'],['Throughput','4,500 – 9,000 persons/hour'],['Drive','Geared motor with chain transmission'],['Safety','Anti-reversal, brake, step sag detection'],['Standards','EN 115-1 · ISO 9386 Compliant']],features:[{t:'Regenerative Energy Recovery',d:'Drives recover energy during descent operation, reducing net consumption by up to 25%.'},{t:'Step Sag Detection',d:'Continuous step integrity monitoring with automatic shutdown if step deformation is detected.'},{t:'Comb Plate Safety System',d:'Optical sensor detects obstruction at entry/exit and stops escalator within 0.5 seconds.'},{t:'Auto-Restart with Verification',d:'After emergency stop, automatic safety verification sequence before restart — no manual reset required.'},{t:'Modular Truss Construction',d:'Pre-fabricated truss sections reduce installation time and allow phased site delivery.'},{t:'Skirt Brush Safety',d:'Anti-entrapment brush system along both skirt panels prevents shoe and clothing entrapment.'}],useCases:['Shopping Malls','Airport Terminals','Metro & Rail Stations','Department Stores','Government Buildings','Convention Centres']},
+  'generator':{name:'Generator',badge:'Generator',tagline:'Uninterrupted power — industrial-grade backup',desc:'Euro Elevator supplies diesel generators from 15 kVA to 3,000 kVA with Perkins, Cummins, and Volvo Penta engines. AMF-controlled automatic systems for critical facilities — hospitals, data centres, commercial buildings. Nationwide supply and commissioning.',image:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image217.jpg',gradient:'linear-gradient(135deg,#0A1628,#4a1a00)',tags:['Commercial','Industrial','Hospital','Data Centre'],specs:[['Power Range','15 kVA – 3,000 kVA'],['Fuel Type','Diesel'],['Engine','Perkins / Cummins / Volvo Penta'],['Alternator','Stamford / Mecc Alte'],['Control Panel','AMF + ATS (10-sec transfer)'],['Enclosure','Canopy / Open / Containerised'],['Noise Level','72 dB(A) at 7m (canopy)'],['Standards','ISO 8528 · IEC 60034 Compliant']],features:[{t:'AMF Automatic Failover',d:'Automatic Mains Failure detects outage, starts engine, and transfers load within 10 seconds.'},{t:'World-Class Engine Brands',d:'Perkins (UK), Cummins (US), and Volvo Penta — globally proven in mission-critical applications.'},{t:'Acoustic Canopy',d:'Sound-attenuated enclosures reduce operating noise to 72 dB(A) at 7m — compliant with urban noise limits.'},{t:'GPRS Remote Monitoring',d:'Real-time status, fault alerts, and runtime reporting via cloud-based monitoring dashboard.'},{t:'Paralleling Capability',d:'Multiple sets can be paralleled for redundancy or load sharing in large critical installations.'},{t:'Annual Maintenance Contracts',d:'Euro Elevator AMC covers scheduled servicing, load testing, and emergency callout for all installed units.'}],useCases:['Commercial Buildings','Hospitals & Clinics','Industrial Plants','Data Centres','Hotels & Resorts','Government Facilities']}
+};
+
+const INSTALLATIONS = [
+  {num:'01',name:'Oparajita Tower',type:'Residential Complex',location:'DOHS Mirpur, Dhaka',system:'Passenger Elevator',floors:'18',units:'2 units',year:'2022',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/OPARAJITA-TOWER-DOHS-Mirp-1.png',ph:'linear-gradient(135deg,#0A1628,#0B4DB8)',specs:[['System','VVVF Passenger Elevator'],['Capacity','630 kg per unit'],['Speed','1.0 m/s'],['Floors','18 stops']]},
+  {num:'02',name:'Bangladesh University of Professionals',type:'University Campus',location:'Mirpur, Dhaka',system:'Passenger Elevator',floors:'12',units:'4 units',year:'2019',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Bangladesh-University-of-Pr.png',ph:'linear-gradient(135deg,#083A8A,#0B4DB8)',specs:[['System','Group-Control Passenger'],['Capacity','800 kg per unit'],['Speed','1.0 m/s'],['Floors','12 stops']]},
+  {num:'03',name:'Addin Hospital & Medical Group',type:'Healthcare',location:'Dhaka',system:'Hospital Bed Lift',floors:'10',units:'3 units',year:'2021',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg',ph:'linear-gradient(135deg,#0A1628,#064e6e)',specs:[['System','EN 81-76 Hospital Elevator'],['Capacity','1,600 kg per unit'],['Door Width','1,200 mm'],['Floors','10 stops']]},
+  {num:'04',name:'Akij Jute Mill',type:'Industrial',location:'Narsingdi',system:'Cargo Elevator',floors:'6',units:'2 units',year:'2020',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png',ph:'linear-gradient(135deg,#1a0a00,#3d2000)',specs:[['System','Heavy-Duty Cargo Elevator'],['Capacity','3,000 kg per unit'],['Platform','Forklift-rated'],['Floors','6 stops']]}
+];
+
+const PROJECTS = [
+  {name:'Oparajita Tower',type:'Residential',loc:'DOHS Mirpur, Dhaka',system:'Passenger Elevator',floors:18,cat:'residential',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/OPARAJITA-TOWER-DOHS-Mirp-1.png'},
+  {name:'Bangladesh University of Professionals',type:'Education',loc:'Mirpur, Dhaka',system:'Passenger Elevator',floors:12,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Bangladesh-University-of-Pr.png'},
+  {name:'Addin Hospital',type:'Healthcare',loc:'Dhaka',system:'Hospital Bed Lift',floors:10,cat:'hospital',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg'},
+  {name:'Akij Jute Mill',type:'Industrial',loc:'Narsingdi',system:'Cargo Elevator',floors:6,cat:'industrial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png'},
+  {name:'Akij Textile Mills',type:'Industrial',loc:'Gazipur',system:'Cargo Elevator',floors:6,cat:'industrial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-TEXTILE.png'},
+  {name:'BAY Developments',type:'Residential',loc:'Dhaka',system:'Passenger Elevator',floors:14,cat:'residential',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/BAY.png'},
+  {name:'Kangaroo Convocation Center',type:'Commercial',loc:'Dhaka',system:'Escalator & Lift',floors:5,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Kangaroo-Convocation-Center.png'},
+  {name:'Milestone School & College',type:'Education',loc:'Dhaka',system:'Passenger Elevator',floors:8,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Milestone-School-College.png'},
+  {name:'CSC Complex',type:'Commercial',loc:'Dhaka',system:'Passenger Elevator',floors:10,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/CSC.png'},
+  {name:'LS Tower',type:'Residential',loc:'Dhaka',system:'Passenger Elevator',floors:12,cat:'residential',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/LS.png'},
+  {name:'TRZ Tower',type:'Commercial',loc:'Dhaka',system:'Passenger Elevator',floors:16,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/TRZ.png'},
+  {name:'MKH Complex',type:'Commercial',loc:'Dhaka',system:'Passenger Elevator',floors:10,cat:'commercial',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-1-1.jpeg'},
+  {name:'Euro Elevator Installation',type:'Residential',loc:'Dhaka',system:'Passenger Elevator',floors:8,cat:'residential',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image230-1.jpg'},
+  {name:'Addin Medical Centre',type:'Healthcare',loc:'Dhaka',system:'Hospital Elevator',floors:8,cat:'hospital',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-4.jpeg'},
+  {name:'MKH Medical Tower',type:'Healthcare',loc:'Dhaka',system:'Hospital Bed Lift',floors:12,cat:'hospital',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-4.jpeg'},
+];
+
+const MANAGEMENT = [
+  {name:'Md. Eadul Haque',role:'Managing Director & CEO',desc:'Founded Euro Elevator in April 2004. With over two decades of industry experience, he leads the company\'s strategic vision and engineering delivery across Bangladesh.',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MD.-Eadul-Haque-1.jpg'},
+  {name:'Mrs. Mahmuda Haque',role:'Director (Finance)',desc:'Oversees financial strategy, corporate governance, and commercial operations. Instrumental in building the company\'s financial discipline over two decades of growth.',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Mahmuda-Khanome-Director.png'},
+  {name:'Major Iqbal Hossain (Retd.)',role:'Director (Marketing)',desc:'Brings military precision to market development. Leads the national sales network, institutional client relationships, and government procurement strategy.',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Major-Iqbal-Hossain.png'},
+  {name:'Md. Rezaul Karim Molla',role:'Deputy General Manager',desc:'Manages day-to-day operations across the national office network. Coordinates installation teams, maintenance contracts, and technical quality assurance.',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Md.-Rezaul-Karim-Molla-1.png'},
+];
+
+const CLIENT_LOGOS = [
+  {name:'BUP',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/BUP_logo-150x150xc.jpg'},
+  {name:'Bay Developments',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/BAY-LOGO-150x150xc.png'},
+  {name:'Home 71',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/HOME-71-LOGO-150x150xc.png'},
+  {name:'Emami',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/EMAMI-logo-150x150xc.png'},
+  {name:'SBDL',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/SBDL-logo-1-150x150xc.png'},
+];
+
+const GALLERY_IMGS = [
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg',cap:'Addin Hospital — Elevator Installation'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-2.jpeg',cap:'Addin Hospital — Cab Interior'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-3-1.jpeg',cap:'Addin Hospital — Shaft Works'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-4.jpeg',cap:'Addin Hospital — Door Installation'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-5.jpeg',cap:'Addin Hospital — Control Panel'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-6.jpeg',cap:'Addin Hospital — Landing Call Station'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-7.jpeg',cap:'Addin Hospital — Machine Room'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-8.jpeg',cap:'Addin Hospital — Final Commissioning'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-9.jpeg',cap:'Addin Hospital — Completed System'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-1-1.jpeg',cap:'MKH Complex — Elevator Installation'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-2.jpeg',cap:'MKH Complex — Cab Interior'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-3.jpeg',cap:'MKH Complex — Shaft Assembly'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-4.jpeg',cap:'MKH Complex — Door System'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-5.jpeg',cap:'MKH Complex — Installation Team'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/MKH-6.jpeg',cap:'MKH Complex — Completed Installation'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/Turkey-Lift-4.jpg',cap:'Turkey Series — Premium Cab Finish'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/Turkey-Lift-6.jpg',cap:'Turkey Series — Glass Door System'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/Turkey-Lift-8.jpg',cap:'Turkey Series — Control Panel Detail'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/CHINA-lift-1.jpg',cap:'China Series — Passenger Elevator'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/12/CHINA-lift-4.jpg',cap:'China Series — MRL System'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image215-1.jpg',cap:'Commercial Escalator Installation'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image216.jpg',cap:'Escalator — Truss Assembly'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image222.jpg',cap:'Elevator Cab — Interior View'},
+  {img:'https://www.euroelevator-bd.com/wp-content/uploads/2018/06/4K-2.jpg',cap:'Premium 4K Interior Finish'},
+];
+
+const TIMELINE=[
+  {year:'2004',event:'Company Founded',detail:'Established in April 2004 by Md. Eadul Haque in Uttara, Dhaka. Registered as a trademark-protected engineering company.'},
+  {year:'2006',event:'First Major Contract',detail:'Secured first multi-unit residential installation in Dhaka — establishing field-proven delivery capability.'},
+  {year:'2008',event:'Escalator & Generator Added',detail:'Expanded product portfolio to include escalators and diesel generators, becoming a full vertical mobility company.'},
+  {year:'2010',event:'China OEM Partnership',detail:'Established direct OEM partnerships with ISO-certified elevator manufacturers in China.'},
+  {year:'2013',event:'Turkey Partnership Signed',detail:'Signed exclusive supply agreement with Turkish elevator manufacturers for EN 81-certified premium systems.'},
+  {year:'2015',event:'Mirpur Branch Opened',detail:'Second office opened in Mirpur, Dhaka to serve northern and central Dhaka markets.'},
+  {year:'2017',event:'500+ Installations Milestone',detail:'Achieved 500 completed installations across Dhaka, Chittagong, and divisional cities.'},
+  {year:'2019',event:'Rajshahi Branch',detail:'Third office opened in Rajshahi, extending service coverage to northwest Bangladesh.'},
+  {year:'2021',event:'BEELIA Membership',detail:'Became a formal member of Bangladesh Elevator, Escalator & Lift Industry Association.'},
+  {year:'2024',event:'1,000+ Installations',detail:'Reached the 1,000-installation milestone — 20 years of precision engineering across Bangladesh.'},
+];
+
+const PROGRESS=[{y:'2004',p:19},{y:'2006',p:15},{y:'2007',p:19},{y:'2008',p:18},{y:'2009',p:29},{y:'2010',p:35},{y:'2011',p:40},{y:'2012',p:48},{y:'2013',p:55},{y:'2014',p:52},{y:'2015',p:60},{y:'2016',p:75},{y:'2017',p:86},{y:'2018',p:60},{y:'2019',p:92},{y:'2020',p:44},{y:'2021',p:78},{y:'2022',p:75},{y:'2023',p:49}];
+
+/* ── CONFIGURATOR LOGIC (Enhanced v5 — floor-aware) ── */
+let cfgState={buildingType:null,floors:10,usage:null};
+const CFG_RULES={
+  hospital:{name:'Hospital / Bed Lift',cap:'1,000–2,500 kg',type:'EN 81-76 Healthcare Certified',note:'Evacuation mode compliant',sysKey:'hospital-elevator'},
+  residential:{name:'Passenger Elevator',cap:'320–1,000 kg',type:'VVVF Gearless / MRL',note:'MRL option available for 6+ floors',sysKey:'passenger-elevator'},
+  commercial:{name:'Passenger / Group Control',cap:'480–1,600 kg',type:'VVVF Gearless Group',note:'Group control recommended for 3+ lifts',sysKey:'passenger-elevator'},
+  mall:{name:'Escalator + Elevator',cap:'Escalator: 9,000 persons/hr',type:'Commercial Escalator + Passenger Lift',note:'Escalator for primary flow, lifts for accessibility',sysKey:'escalator'},
+  industrial:{name:'Cargo / Freight Elevator',cap:'1,000–10,000 kg',type:'Heavy Duty Traction / Hydraulic',note:'Forklift-rated platform available',sysKey:'cargo-elevator'},
+  villa:{name:'Home / Villa Lift',cap:'200–400 kg',type:'Screw or Chain Drive',note:'Single-phase 220V household power',sysKey:'home-lift'},
+};
+function getSpeedFromFloors(floors,type){
+  if(type==='villa') return '0.15–0.5 m/s';
+  if(type==='industrial') return '0.25–0.63 m/s';
+  if(type==='hospital') return '0.5–1.0 m/s';
+  if(floors<=5) return '0.5–1.0 m/s';
+  if(floors<=10) return '1.0–1.5 m/s';
+  if(floors<=20) return '1.5–2.0 m/s';
+  return '2.0–2.5 m/s';
+}
+function getUnitsFromFloors(floors,type){
+  if(type==='villa'||type==='industrial'||type==='hospital') return 1;
+  if(floors<=6) return 1;
+  if(floors<=14) return '1–2';
+  if(floors<=24) return '2–3';
+  return '3–4';
+}
+function getMachineRoom(floors,type){
+  if(type==='villa') return 'Not required';
+  if(type==='industrial'||type==='hospital') return 'Machine room required';
+  if(floors<=12) return 'MRL recommended';
+  return 'Machine room or MRL';
+}
+function cfgSelect(type,el,group){
+  el.closest('.cfg-options').querySelectorAll('.cfg-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  if(group==='building') cfgState.buildingType=type;
+  if(group==='usage') cfgState.usage=type;
+  updateCfgResult();
+}
+function cfgFloor(delta){
+  const inp=document.getElementById('cfg-floor');if(!inp)return;
+  cfgState.floors=Math.max(2,Math.min(60,cfgState.floors+delta));
+  inp.value=cfgState.floors;
+  updateCfgResult();
+}
+function cfgFloorInput(val){cfgState.floors=Math.max(2,Math.min(60,parseInt(val)||2));updateCfgResult();}
+function updateCfgResult(){
+  const el=document.getElementById('cfg-result');if(!el)return;
+  if(!cfgState.buildingType){el.innerHTML='<div class="cfg-result-empty">Select building type to generate system recommendation.</div>';return;}
+  const r=CFG_RULES[cfgState.buildingType]||CFG_RULES.residential;
+  const speed=getSpeedFromFloors(cfgState.floors,cfgState.buildingType);
+  const units=getUnitsFromFloors(cfgState.floors,cfgState.buildingType);
+  const mr=getMachineRoom(cfgState.floors,cfgState.buildingType);
+  el.innerHTML=`<div class="cfg-result-title">Recommended System — ${cfgState.floors}-Floor ${cfgState.buildingType.charAt(0).toUpperCase()+cfgState.buildingType.slice(1)}</div>
+  <div class="cfg-output-grid">
+    <div class="cfg-output-item"><div class="cfg-output-label">System Type</div><div class="cfg-output-val" style="font-size:13px;line-height:1.3;">${r.name}</div></div>
+    <div class="cfg-output-item"><div class="cfg-output-label">Capacity Range</div><div class="cfg-output-val" style="font-size:13px;">${r.cap}</div></div>
+    <div class="cfg-output-item"><div class="cfg-output-label">Speed Range</div><div class="cfg-output-val" style="font-size:14px;">${speed}</div></div>
+    <div class="cfg-output-item"><div class="cfg-output-label">Drive Type</div><div class="cfg-output-val" style="font-size:13px;">${r.type}</div></div>
+    <div class="cfg-output-item"><div class="cfg-output-label">Units Recommended</div><div class="cfg-output-val">${units}</div></div>
+    <div class="cfg-output-item"><div class="cfg-output-label">Machine Room</div><div class="cfg-output-val" style="font-size:12px;">${mr}</div></div>
+  </div>
+  <div style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.4);padding:8px;border-top:1px solid rgba(255,255,255,0.08);">Note: ${r.note}. Final specification requires site survey.</div>
+  <div class="cfg-result-rec" onclick="nav('systems/${r.sysKey}')">View ${r.name} Specifications <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>`;
+}
+
+/* ── ROUTER ── */
+function nav(page){
+  history.pushState({page},'','#'+page);
+  renderPage(page);
+  window.scrollTo({top:0,behavior:'smooth'});
+  updateNav(page);
+  toggleMobile(false);
+}
+window.addEventListener('popstate',e=>{
+  const p=e.state?.page||location.hash.replace('#','')||'home';
+  renderPage(p);updateNav(p);
+});
+function mobileNav(p){nav(p);}
+function updateNav(page){
+  document.querySelectorAll('.nav-a').forEach(a=>{
+    const dp=a.dataset.page;
+    a.classList.toggle('active',page===dp||page.startsWith(dp+'/'));
+  });
+}
+function renderPage(page){
+  const app=document.getElementById('app');
+  const parts=page.split('/');
+  let html='';
+  if(parts[0]==='systems'&&parts[1]&&SYSTEMS[parts[1]])html=pgSystemDetail(parts[1]);
+  else if(parts[0]==='solutions'&&parts[1])html=pgSolutionDetail(parts[1]);
+  else{
+    const pages={home:pgHome,about:pgAbout,systems:pgSystems,installations:pgInstallations,solutions:pgSolutions,configurator:pgConfigurator,downloads:pgDownloads,contact:pgContact,gallery:pgGallery};
+    html=(pages[parts[0]]||pgHome)();
+  }
+  app.innerHTML=html;
+  app.style.animation='none';
+  requestAnimationFrame(()=>{app.style.animation='';});
+  setTimeout(initScripts,60);
+}
+(function(){const p=location.hash.replace('#','')||'home';renderPage(p);updateNav(p);})();
+
+/* ══════════ PAGE RENDERERS ══════════ */
+
+function pgHome(){
+  return `
+<!-- HERO — DOMINANCE STATEMENT -->
+<section class="hero-command">
+  <div class="hero-bg">
+    <img src="https://www.euroelevator-bd.com/wp-content/uploads/2023/11/image222.jpg" alt="Euro Elevator Installation" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="hero-bg-fallback" style="display:none"></div>
+    <div class="hero-bg-grad"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-status"><div class="hero-status-dot"></div><span class="hero-status-text">Operational · Dhaka, Bangladesh · Est. April 2004</span></div>
+    <h1 class="hero-statement">
+      1,000+<br>
+      Installations.<span class="line-dim">Elevators. Escalators. Power Systems.</span>
+    </h1>
+    <div class="hero-ctas">
+      <a onclick="nav('installations')" class="btn btn-orange" style="cursor:pointer;">View Installations <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+      <a onclick="nav('contact')" class="btn btn-outline-white" style="cursor:pointer;">Request Proposal</a>
+      <a onclick="nav('configurator')" class="btn btn-ghost" style="cursor:pointer;">⚙ System Configurator</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-metric"><div class="hero-metric-num" data-count="1000">0</div><div class="hero-metric-label">Lift Units Installed</div></div>
+      <div class="hero-meta-divider"></div>
+      <div class="hero-metric"><div class="hero-metric-num" data-count="21">0</div><div class="hero-metric-label">Years of Operation</div></div>
+      <div class="hero-meta-divider"></div>
+      <div class="hero-metric"><div class="hero-metric-num" data-count="30">0</div><div class="hero-metric-label">Escalators Deployed</div></div>
+      <div class="hero-meta-divider"></div>
+      <div class="hero-metric"><div class="hero-metric-num">24/7</div><div class="hero-metric-label">Maintenance Response</div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div><span class="scroll-text">Scroll</span></div>
+</section>
+
+<!-- OPERATIONAL FOOTPRINT -->
+<div class="footprint">
+  <div class="footprint-grid container">
+    ${[
+      {n:'1000',sup:'+',l:'Lift Systems Installed',bar:88},
+      {n:'30',sup:'+',l:'Escalators Deployed',bar:60},
+      {n:'3000',sup:'kVA',l:'Generator Capacity',bar:72},
+      {n:'21',sup:'yrs',l:'Years in Operation',bar:100},
+      {n:'3',sup:'',l:'National Office Locations',bar:40},
+    ].map(f=>`<div class="footprint-cell reveal">
+      <div class="footprint-num"><span data-count="${f.n}">0</span><span>${f.sup}</span></div>
+      <div class="footprint-label">${f.l}</div>
+      <div class="footprint-bar"><div class="footprint-bar-fill" data-target="${f.bar}"></div></div>
+    </div>`).join('')}
+  </div>
+</div>
+
+<!-- SELECTED INSTALLATIONS -->
+<section class="installations">
+  <div class="installations-header">
+    <div><div class="eyebrow" style="color:var(--orange);">Selected Installations</div><h2>Deployed Across Bangladesh.</h2></div>
+    <div><div class="installations-count">1,000+ TOTAL · SINCE 2004</div><div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;"><a onclick="nav('installations')" class="btn btn-outline-white" style="cursor:pointer;font-size:13px;padding:10px 20px;">All Installations →</a><a onclick="nav('gallery')" class="btn btn-ghost" style="cursor:pointer;font-size:13px;padding:10px 20px;">📷 Gallery</a></div></div>
+  </div>
+  ${INSTALLATIONS.map((inst,i)=>`
+  <div class="inst-item">
+    <div class="inst-visual">
+      <img src="${inst.img}" alt="${inst.name}" loading="${i<2?'eager':'lazy'}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="inst-ph" style="display:none;background:${inst.ph}"></div>
+      <div class="inst-visual-overlay"></div>
+      <div class="inst-badge">${inst.type}</div>
+    </div>
+    <div class="inst-content">
+      <div class="inst-num">${inst.num}</div>
+      <div class="inst-type">${inst.system.toUpperCase()}</div>
+      <h3 class="inst-name">${inst.name}</h3>
+      <div class="inst-meta-row">
+        <div class="inst-meta-item"><div class="inst-meta-dot"></div>${inst.location}</div>
+        <div class="inst-meta-item"><div class="inst-meta-dot"></div>${inst.floors} floors · ${inst.units}</div>
+        <div class="inst-meta-item"><div class="inst-meta-dot"></div>Completed ${inst.year}</div>
+      </div>
+      <div class="inst-specs">
+        ${inst.specs.map(([k,v])=>`<div class="inst-spec"><div class="inst-spec-label">${k}</div><div class="inst-spec-val">${v}</div></div>`).join('')}
+      </div>
+    </div>
+  </div>`).join('')}
+</section>
+
+<!-- SYSTEMS GRID -->
+<section class="systems-section section-pad">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Deployed Systems</div>
+      <h2 class="section-title">Engineered for <span class="accent">Every Application</span></h2>
+      <p class="section-desc">Seven product lines — from compact home lifts to industrial cargo systems and commercial escalators. All sourced from OEM-certified manufacturers in Turkey and China.</p>
+    </div>
+    <div class="systems-grid reveal">
+      ${Object.entries(SYSTEMS).map(([key,s],i)=>`
+      <div class="system-tile" onclick="nav('systems/${key}')">
+        <div class="system-tile-img">
+          <img src="${s.image}" alt="${s.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="system-tile-ph" style="display:none;background:${s.gradient}"></div>
+          <div class="system-tile-overlay"></div>
+          <div class="system-tile-badge">${s.badge}</div>
+        </div>
+        <div class="system-tile-body">
+          <div class="system-tile-title">${s.name}</div>
+          <div class="system-tile-sub">${s.tagline}</div>
+          <div class="system-tile-tags">${s.tags.slice(0,3).map(t=>`<span class="system-tile-tag">${t}</span>`).join('')}</div>
+        </div>
+        <div class="system-tile-arrow"><svg viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATOR TEASER -->
+<section class="configurator-section">
+  <div class="container">
+    <div class="configurator-inner">
+      <div class="configurator-desc reveal-left">
+        <div class="eyebrow" style="color:var(--orange);">System Configurator</div>
+        <h2 class="section-title section-title-white">Find the Right<br>System. Precisely.</h2>
+        <p class="section-desc section-desc-white" style="margin-top:16px;">Input your building parameters and our configurator generates a tailored system recommendation — capacity, speed, drive type, and compliance requirements. No sales pitch. Engineering logic.</p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px;">
+          ${['Building type and usage pattern','Floor count → speed and drive classification','Capacity and duty cycle requirement','Recommended units and machine room type'].map(f=>`<div style="display:flex;align-items:center;gap:12px;font-size:13.5px;color:rgba(255,255,255,0.7);"><div style="width:5px;height:5px;background:var(--orange);border-radius:50%;flex-shrink:0;"></div>${f}</div>`).join('')}
+        </div>
+        <div style="margin-top:36px;"><a onclick="nav('configurator')" class="btn btn-orange" style="cursor:pointer;">Open Full Configurator</a></div>
+      </div>
+      <div class="configurator-panel reveal-right">
+        <div class="cfg-title">System Configuration Engine · v5.0</div>
+        <div class="cfg-group">
+          <div class="cfg-label">Building Type</div>
+          <div class="cfg-options">
+            <div class="cfg-opt" onclick="cfgSelect('residential',this,'building')">Residential</div>
+            <div class="cfg-opt" onclick="cfgSelect('commercial',this,'building')">Commercial</div>
+            <div class="cfg-opt" onclick="cfgSelect('hospital',this,'building')">Hospital</div>
+            <div class="cfg-opt" onclick="cfgSelect('mall',this,'building')">Mall / Retail</div>
+            <div class="cfg-opt" onclick="cfgSelect('industrial',this,'building')">Industrial</div>
+            <div class="cfg-opt" onclick="cfgSelect('villa',this,'building')">Home / Villa</div>
+          </div>
+        </div>
+        <div class="cfg-group">
+          <div class="cfg-label">Number of Floors</div>
+          <div class="cfg-floor-wrap">
+            <button class="cfg-floor-btn" onclick="cfgFloor(-1)">−</button>
+            <input class="cfg-floor-input" type="number" id="cfg-floor" value="10" min="2" max="60" oninput="cfgFloorInput(this.value)">
+            <button class="cfg-floor-btn" onclick="cfgFloor(1)">+</button>
+            <span style="font-size:13px;color:rgba(255,255,255,0.5);margin-left:8px;">floors</span>
+          </div>
+        </div>
+        <div class="cfg-result" id="cfg-result"><div class="cfg-result-empty">Select building type to generate system recommendation.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions-section section-pad">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Solutions by Sector</div>
+      <h2 class="section-title">Engineered for <span class="accent">Your Sector</span></h2>
+      <p class="section-desc">Industry-specific system configurations — because a hospital elevator and a cargo lift are not the same engineering challenge.</p>
+    </div>
+    <div class="solutions-grid" style="margin-top:40px;">
+      ${[
+        {key:'healthcare',cat:'Healthcare',title:'Hospital & Clinical Systems',items:['EN 81-76 Evacuation Compliant','Antibacterial Cab Surfaces','1,400mm Stretcher-width Doors','Emergency UPS Power'],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg',ph:'linear-gradient(135deg,#0A1628,#064e6e)'},
+        {key:'commercial',cat:'Commercial',title:'Office & Mixed-Use Buildings',items:['Group Control Systems','High-Speed 2.5 m/s','Energy Recovery Drive','Premium Cab Finishes'],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Bangladesh-University-of-Pr.png',ph:'linear-gradient(135deg,#0A1628,#0B4DB8)'},
+        {key:'retail',cat:'Retail & Hospitality',title:'Malls, Hotels & Showrooms',items:['Panoramic Glass Cabs','Commercial Escalators','High-Throughput Design','Architectural Integration'],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Kangaroo-Convocation-Center.png',ph:'linear-gradient(135deg,#1a0a00,#F28C28)'},
+        {key:'industrial',cat:'Industrial',title:'Factories & Logistics',items:['Up to 10,000 kg Capacity','Forklift-Ready Platform','S5 Duty Cycle','Hydraulic Drive Option'],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png',ph:'linear-gradient(135deg,#1a0a00,#3d2000)'},
+      ].map(s=>`
+      <div class="sol-card" onclick="nav('solutions/${s.key}')">
+        <div class="sol-bg"><img src="${s.img}" alt="${s.title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="sol-bg-color" style="display:none;background:${s.ph}"></div></div>
+        <div class="sol-overlay"></div>
+        <div class="sol-content">
+          <div class="sol-category">${s.cat}</div>
+          <h3 class="sol-title">${s.title}</h3>
+          <div class="sol-items">${s.items.map(i=>`<span class="sol-item">${i}</span>`).join('')}</div>
+        </div>
+        <div class="sol-arrow"><svg viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Deployment Process</div>
+      <h2 class="section-title" style="text-align:center;">From Specification<br>to <span class="accent">Handover</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative;">
+      <div style="position:absolute;top:28px;left:60px;right:60px;height:2px;background:linear-gradient(90deg,var(--orange),var(--blue));"></div>
+      ${[
+        {n:1,icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',t:'Site Survey',d:'Our engineers conduct a full site survey and load analysis — no charge, no commitment.'},
+        {n:2,icon:'<line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',t:'Proposal',d:'Detailed system specification, engineering drawings, and transparent pricing within 48 hours.'},
+        {n:3,icon:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',t:'Installation',d:'Certified engineers execute installation to EN 81 standards with full documentation.'},
+        {n:4,icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',t:'Handover & AMC',d:'Commissioning, safety testing, operator training, and ongoing maintenance contract.'},
+      ].map(s=>`
+      <div class="reveal" style="padding:0 20px 0 0;position:relative;">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;z-index:1;box-shadow:0 0 0 6px rgba(11,77,184,0.1);">
+          <svg width="22" height="22" viewBox="0 0 24 24" stroke="#fff" fill="none" stroke-width="2">${s.icon}</svg>
+          <div style="position:absolute;top:-8px;right:-8px;width:20px;height:20px;background:var(--navy);color:#fff;font-size:9px;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;">${s.n}</div>
+        </div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:19px;font-weight:700;color:var(--navy);margin-bottom:8px;">${s.t}</div>
+        <p style="font-size:13.5px;color:var(--text-md);line-height:1.72;">${s.d}</p>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section-pad" style="background:var(--navy);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.07) 1px,transparent 1px);background-size:48px 48px;"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--orange);">Manufacturing Partners</div>
+      <h2 class="section-title section-title-white">Sourced from <span style="color:var(--orange);">Certified Manufacturers.</span></h2>
+      <p class="section-desc section-desc-white">Direct OEM relationships with certified factories — no intermediaries. European-standard Turkish systems and ISO-certified Chinese systems.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;">
+      ${[
+        {flag:'🇹🇷',country:'Turkey',desc:'EN 81-20/50 certified systems. European manufacturing standards. Premium cab finishes, gearless drive systems, and CE-marked components.',tags:['EN 81 Certified','CE Marked','Gearless VVVF','Premium Cab','European Standard']},
+        {flag:'🇨🇳',country:'China',desc:'ISO 9001-certified manufacturing. High-volume production with full system supply capability. Proven reliability across 1,000+ Bangladesh installations.',tags:['ISO 9001','Full System Supply','High Volume','Cost-Effective','Safety Certified']},
+      ].map((p,i)=>`
+      <div class="reveal reveal-d${i+1}" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:36px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--orange);"></div>
+        <div style="font-size:40px;margin-bottom:12px;">${p.flag}</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:#fff;margin-bottom:10px;">${p.country}</div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.78;margin-bottom:20px;">${p.desc}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">${p.tags.map(t=>`<span style="padding:4px 11px;background:rgba(11,77,184,0.3);border:1px solid rgba(11,77,184,0.5);color:rgba(255,255,255,0.8);font-size:11px;font-weight:500;">${t}</span>`).join('')}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Client Roster</div>
+      <h2 class="section-title" style="text-align:center;">Trusted by <span class="accent">Bangladesh's Institutions</span></h2>
+    </div>
+    <div class="reveal" style="display:flex;align-items:stretch;flex-wrap:wrap;border:1px solid var(--border);margin-top:36px;">
+      ${CLIENT_LOGOS.map(c=>`
+      <div style="padding:24px 36px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:background 0.2s;flex:1;min-width:160px;" onmouseover="this.style.background='var(--gray-bg)'" onmouseout="this.style.background=''">
+        <img src="${c.img}" alt="${c.name}" style="height:44px;width:auto;max-width:120px;object-fit:contain;filter:grayscale(100%) opacity(0.6);transition:filter 0.25s;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--text-md);">${c.name}</span>
+      </div>`).join('')}
+      ${['Grameen Bank','Bangladesh Army','RAJUK','Square Hospital','Epyllion Group','Bashundhara City'].map(c=>`
+      <div style="padding:24px 28px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='var(--gray-bg)'" onmouseout="this.style.background=''">
+        <span style="font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;color:var(--text-md);letter-spacing:.04em;white-space:nowrap;">${c}</span>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-pad" style="background:var(--navy-deep);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.06) 1px,transparent 1px);background-size:60px 60px;"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--orange);">Deployment Inquiry</div>
+        <h2 class="section-title section-title-white">Specify Your<br>Requirements.</h2>
+        <p class="section-desc section-desc-white">Share your building specifications. Our engineering team will prepare a detailed proposal within 48 hours — no obligation.</p>
+        <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;">
+          <a href="tel:+8801817291551" class="btn btn-orange">📞 Call Hotline</a>
+          <a href="https://wa.me/8801817291551" target="_blank" class="btn btn-outline-white">WhatsApp Us</a>
+        </div>
+        <div style="margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          ${[{l:'24/7 Hotline',v:'01817-291551'},{l:'Email',v:'info@euroelevator-bd.com'},{l:'Head Office',v:'Uttara, Dhaka – 1230'},{l:'Office Phone',v:'+88 02 41091241'}].map(c=>`
+          <div style="padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);">
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;">${c.l}</div>
+            <div style="font-size:13px;font-weight:600;color:#fff;">${c.v}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="reveal reveal-d1" style="background:var(--white);padding:36px;">
+        <div id="home-qf">
+          <div style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px;border-bottom:2px solid var(--orange);padding-bottom:14px;">Quick Enquiry</div>
+          <div class="form-row" style="margin-top:18px;">
+            <div class="form-group"><label>Name *</label><input type="text" id="qf-name" placeholder="Full name"></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" id="qf-phone" placeholder="+880 1X..."></div>
+          </div>
+          <div class="form-group"><label>System Required *</label>
+            <select id="qf-sys">
+              <option value="">— Select system —</option>
+              <option>Passenger Elevator</option><option>Panoramic Elevator</option><option>Hospital / Bed Lift</option>
+              <option>Cargo / Freight Elevator</option><option>Home / Villa Lift</option><option>Escalator</option><option>Generator</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Building Type</label><select><option value="">— Type —</option><option>Residential</option><option>Commercial</option><option>Hospital</option><option>Industrial</option><option>Government</option></select></div>
+            <div class="form-group"><label>Floors</label><input type="number" placeholder="e.g. 12" min="2"></div>
+          </div>
+          <div class="form-actions"><button onclick="submitQF()" class="btn btn-orange" style="flex:1;justify-content:center;border:none;cursor:pointer;font-size:14px;">Submit Enquiry →</button></div>
+        </div>
+        <div class="form-success" id="home-qf-success" style="display:none;">
+          <div class="form-success-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Received.</h3><p>Our team will contact you within 24 hours.<br>Urgent: <a href="tel:+8801817291551" style="color:var(--blue);font-weight:600;">01817-291551</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT INFO BAR -->
+<div style="background:var(--blue);">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);max-width:1280px;margin:0 auto;">
+    ${[
+      {icon:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/>',l:'Phone & Hotline',v:'+88 02 41091241–44 · Hotline: 01817-291551'},
+      {icon:'<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>',l:'Email',v:'info@euroelevator-bd.com · sales@euroelevator-bd.com'},
+      {icon:'<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',l:'Head Office',v:'H#88, Lake Drive Rd, Sector 7, Uttara, Dhaka – 1230'},
+    ].map(c=>`
+    <div style="display:flex;align-items:center;gap:14px;padding:26px 32px;border-right:1px solid rgba(255,255,255,0.15);">
+      <div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">${c.icon}</svg>
+      </div>
+      <div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:3px;">${c.l}</div><div style="font-size:13px;font-weight:600;color:#fff;line-height:1.4;">${c.v}</div></div>
+    </div>`).join('')}
+  </div>
+</div>`;
+}
+
+function pgSystems(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Engineering Systems · 7 Product Lines</div>
+  <h1 class="page-hero-title">Deployed Systems</h1>
+  <p class="page-hero-desc">Seven product categories — each engineered for specific applications, load requirements, and building typologies. Direct supply from certified manufacturers with full AMC support.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Systems</span></div>
+</div></div>
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:40px;" id="sys-filter">
+      <button class="proj-filter-btn active" onclick="filterSys('all',this)">All Systems</button>
+      <button class="proj-filter-btn" onclick="filterSys('Elevator',this)">Elevators</button>
+      <button class="proj-filter-btn" onclick="filterSys('Escalator',this)">Escalators</button>
+      <button class="proj-filter-btn" onclick="filterSys('Generator',this)">Generators</button>
+    </div>
+    <div class="systems-grid" id="sys-grid">
+      ${Object.entries(SYSTEMS).map(([key,s],i)=>`
+      <div class="system-tile reveal reveal-d${(i%4)+1}" data-badge="${s.badge}" onclick="nav('systems/${key}')">
+        <div class="system-tile-img">
+          <img src="${s.image}" alt="${s.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="system-tile-ph" style="display:none;background:${s.gradient}"></div>
+          <div class="system-tile-overlay"></div>
+          <div class="system-tile-badge">${s.badge}</div>
+        </div>
+        <div class="system-tile-body">
+          <div class="system-tile-title">${s.name}</div>
+          <div class="system-tile-sub">${s.tagline}</div>
+          <div class="system-tile-tags">${s.tags.slice(0,3).map(t=>`<span class="system-tile-tag">${t}</span>`).join('')}</div>
+        </div>
+        <div class="system-tile-arrow"><svg viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:60px;background:var(--navy);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="reveal">
+      <div><div style="font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;">Maintenance Contracts</div><h3 style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:#fff;margin-bottom:12px;">Annual Maintenance<br>Contracts (AMC)</h3><p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.8;">Emergency response within 2–4 hours. Monthly and quarterly scheduled inspections. Genuine spare parts. Detailed service reports. Available for all installed Euro Elevator systems.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="tel:+8801817291551" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(255,255,255,0.06);color:#fff;font-size:14px;font-weight:600;">📞 Emergency: 01817-291551</a>
+        <a onclick="nav('contact')" class="btn btn-orange" style="cursor:pointer;justify-content:center;">Request AMC Quotation</a>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+function pgSystemDetail(key){
+  const s=SYSTEMS[key];if(!s)return pgSystems();
+  return `
+<section class="product-masthead">
+  <div class="product-masthead-inner">
+    <div class="product-masthead-content">
+      <div class="product-badge">${s.badge}</div>
+      <h1 class="product-title">${s.name}</h1>
+      <p class="product-desc">${s.desc}</p>
+      <div class="product-tags">${s.tags.map(t=>`<span class="product-tag">${t}</span>`).join('')}</div>
+      <div class="product-ctas">
+        <a onclick="nav('contact')" class="btn btn-orange" style="cursor:pointer;">Request Quotation</a>
+        <a href="https://wa.me/8801817291551?text=I'm interested in ${encodeURIComponent(s.name)}" target="_blank" class="btn btn-outline-white">WhatsApp Inquiry</a>
+        <a onclick="nav('downloads')" class="btn btn-ghost" style="cursor:pointer;">↓ Catalogue</a>
+      </div>
+      <div class="breadcrumb" style="margin-top:28px;justify-content:flex-start;"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span onclick="nav('systems')">Systems</span><span class="breadcrumb-sep">›</span><span>${s.name}</span></div>
+    </div>
+    <div class="product-masthead-visual">
+      <img src="${s.image}" alt="${s.name}" onerror="this.parentElement.style.background='${s.gradient}';this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="spec-section section-pad">
+  <div class="container">
+    <div class="reveal"><div class="eyebrow">Technical Specifications</div><h2 class="section-title">System <span class="accent">Specifications</span></h2></div>
+    <div class="spec-layout">
+      <div class="reveal">
+        <table class="spec-table"><tbody>${s.specs.map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('')}</tbody></table>
+        <div style="margin-top:20px;padding:16px;background:rgba(11,77,184,0.06);border-left:3px solid var(--blue);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;">Compliance Note</div>
+          <div style="font-size:13px;color:var(--text-md);">All specifications subject to site survey. Final design per Bangladesh National Building Code (BNBC) requirements.</div>
+        </div>
+      </div>
+      <div class="reveal reveal-d1">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px;">Engineering Features</div>
+        <div class="spec-features">${s.features.map(f=>`<div class="spec-feat"><div class="spec-feat-title">${f.t}</div><div class="spec-feat-desc">${f.d}</div></div>`).join('')}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--gray-bg);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;"><div class="eyebrow" style="justify-content:center;">Applications</div><h2 class="section-title" style="text-align:center;">Deployment <span class="accent">Scenarios</span></h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;">
+      ${s.useCases.map((u,i)=>`
+      <div class="reveal reveal-d${(i%3)+1}" style="background:var(--white);border:1px solid var(--border);padding:24px;border-top:3px solid var(--orange);">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px;">${u}</div>
+        <div style="font-size:13px;color:var(--text-md);line-height:1.62;">Engineered configuration for ${u.toLowerCase()} environments — compliance, capacity, and performance validated.</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--navy-deep);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(11,77,184,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(11,77,184,0.06) 1px,transparent 1px);background-size:60px 60px;"></div>
+  <div class="container" style="position:relative;z-index:1;text-align:center;">
+    <div class="reveal">
+      <div class="eyebrow" style="justify-content:center;color:var(--orange);">Specify Your Requirement</div>
+      <h2 class="section-title section-title-white">Request ${s.name}<br><span style="color:var(--orange);">Quotation</span></h2>
+      <p style="font-size:15px;color:rgba(255,255,255,0.6);max-width:520px;margin:16px auto 32px;line-height:1.78;">Our engineering team will prepare a site-specific proposal within 48 hours. No commitment required.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a onclick="nav('contact')" class="btn btn-orange" style="cursor:pointer;">Request Proposal</a>
+        <a href="tel:+8801817291551" class="btn btn-outline-white">📞 Call Now</a>
+        <a href="https://wa.me/8801817291551?text=Enquiry: ${encodeURIComponent(s.name)}" target="_blank" class="btn btn-ghost">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="reveal"><div class="eyebrow">Related Systems</div><h2 class="section-title">Also <span class="accent">Deployed</span></h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;">
+      ${Object.entries(SYSTEMS).filter(([k])=>k!==key).slice(0,3).map(([k,q],i)=>`
+      <div class="system-tile reveal reveal-d${i+1}" onclick="nav('systems/${k}')">
+        <div class="system-tile-img"><img src="${q.image}" alt="${q.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="system-tile-ph" style="display:none;background:${q.gradient}"></div><div class="system-tile-overlay"></div><div class="system-tile-badge">${q.badge}</div></div>
+        <div class="system-tile-body"><div class="system-tile-title">${q.name}</div><div class="system-tile-sub">${q.tagline}</div></div>
+        <div class="system-tile-arrow"><svg viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>`;
+}
+
+function pgInstallations(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">1,000+ Completed · Nationwide Coverage</div>
+  <h1 class="page-hero-title">Installations</h1>
+  <p class="page-hero-desc">Selected deployments from our national portfolio. Residential towers, hospitals, government buildings, and industrial facilities — across all divisions of Bangladesh.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Installations</span></div>
+</div></div>
+<section class="installations">
+  <div class="installations-header">
+    <div><h2>All Deployments.</h2></div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div class="proj-page-filter" id="inst-filter">
+        <button class="proj-filter-btn active" onclick="filterProj('all',this,'proj-grid')">All</button>
+        <button class="proj-filter-btn" onclick="filterProj('residential',this,'proj-grid')">Residential</button>
+        <button class="proj-filter-btn" onclick="filterProj('commercial',this,'proj-grid')">Commercial</button>
+        <button class="proj-filter-btn" onclick="filterProj('hospital',this,'proj-grid')">Healthcare</button>
+        <button class="proj-filter-btn" onclick="filterProj('industrial',this,'proj-grid')">Industrial</button>
+      </div>
+      <a onclick="nav('gallery')" class="btn btn-ghost" style="cursor:pointer;font-size:12px;padding:8px 16px;">📷 Photo Gallery</a>
+    </div>
+  </div>
+  <div style="padding:0 48px 48px;max-width:1280px;margin:0 auto;">
+    <div class="proj-page-grid" id="proj-grid">
+      ${PROJECTS.map((p,i)=>`
+      <div class="proj-page-card reveal reveal-d${(i%4)+1}" data-cat="${p.cat}">
+        <div class="proj-page-img">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--navy)';this.parentElement.style.minHeight='200px'">
+          <div class="proj-page-overlay"></div>
+          <div class="proj-page-tag">${p.type}</div>
+        </div>
+        <div class="proj-page-body">
+          <div class="proj-page-name">${p.name}</div>
+          <div class="proj-page-meta"><span>📍 ${p.loc}</span><span>🛗 ${p.system}</span><span>🏢 ${p.floors}F</span></div>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- CITY MAP -->
+<section class="map-section section-pad">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Geographic Footprint</div>
+      <h2 class="section-title section-title-white">Coverage Across <span style="color:var(--orange);">Bangladesh</span></h2>
+      <p class="section-desc section-desc-white">Installations across all eight divisions — with office presence in Dhaka, Mirpur, and Rajshahi.</p>
+    </div>
+    <div class="map-wrap">
+      <div class="bd-map-container">
+        <svg class="bd-map-svg" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+          <path d="M120,20 L140,18 L160,25 L175,40 L185,55 L190,75 L195,95 L200,110 L205,130 L210,145 L215,160 L210,175 L205,190 L195,205 L185,215 L175,225 L165,235 L170,248 L175,260 L170,275 L160,285 L148,290 L135,292 L125,285 L115,275 L108,260 L105,245 L100,230 L90,220 L78,215 L68,205 L60,192 L58,178 L62,165 L70,155 L75,142 L78,128 L75,115 L70,100 L72,85 L78,70 L88,55 L100,40 Z"/>
+          <g class="map-pin"><circle cx="148" cy="185" r="6" opacity="0.9"/><text x="155" y="188" style="fill:rgba(255,255,255,0.8);font-size:7px;font-weight:700;">Dhaka</text></g>
+          <g class="map-pin"><circle cx="200" cy="240" r="5" opacity="0.8"/><text x="207" y="243" style="fill:rgba(255,255,255,0.7);font-size:6px;">Chittagong</text></g>
+          <g class="map-pin"><circle cx="210" cy="150" r="4" opacity="0.7"/><text x="216" y="153" style="fill:rgba(255,255,255,0.7);font-size:6px;">Sylhet</text></g>
+          <g class="map-pin"><circle cx="88" cy="120" r="4" opacity="0.7"/><text x="95" y="123" style="fill:rgba(255,255,255,0.7);font-size:6px;">Rajshahi</text></g>
+          <g class="map-pin"><circle cx="95" cy="230" r="4" opacity="0.6"/><text x="102" y="233" style="fill:rgba(255,255,255,0.7);font-size:6px;">Khulna</text></g>
+          <g class="map-pin"><circle cx="190" cy="278" r="4" opacity="0.65"/><text x="150" y="281" style="fill:rgba(255,255,255,0.7);font-size:6px;">Cox's Bazar</text></g>
+        </svg>
+      </div>
+      <div class="map-cities">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px;">Deployments by City</div>
+        ${[
+          {city:'Dhaka',count:'700+ installations',pct:88},
+          {city:'Chittagong',count:'120+ installations',pct:40},
+          {city:"Cox's Bazar",count:'45+ installations',pct:22},
+          {city:'Sylhet',count:'60+ installations',pct:28},
+          {city:'Rajshahi',count:'40+ installations',pct:20},
+          {city:'Khulna',count:'30+ installations',pct:18},
+          {city:'Gazipur',count:'55+ installations',pct:26},
+          {city:'Narayanganj',count:'35+ installations',pct:18},
+        ].map(c=>`
+        <div class="map-city"><div class="map-city-name">${c.city}</div><div class="map-city-count">${c.count}</div><div class="map-city-bar"><div class="map-city-bar-fill" data-target="${c.pct}"></div></div></div>`).join('')}
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+function pgGallery(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Installation Photography</div>
+  <h1 class="page-hero-title">Photo Gallery</h1>
+  <p class="page-hero-desc">Real installation photography from completed projects across Bangladesh — elevators, escalators, cab interiors, machine rooms, and commissioning.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span onclick="nav('installations')">Installations</span><span class="breadcrumb-sep">›</span><span>Gallery</span></div>
+</div></div>
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Installation Photography</div>
+      <h2 class="section-title">From Site to <span class="accent">Commissioning</span></h2>
+      <p class="section-desc">Every image is from an actual Euro Elevator installation. Click any image to view full size.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:40px;" id="gallery-grid">
+      ${GALLERY_IMGS.map((g,i)=>`
+      <div class="gallery-item reveal reveal-d${(i%4)+1}" onclick="openLightbox(${i})" style="aspect-ratio:4/3;overflow:hidden;position:relative;cursor:zoom-in;background:var(--gray-bg);">
+        <img src="${g.img}" alt="${g.cap}" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='var(--gray-mid)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.7) 0%,transparent 50%);opacity:0;transition:opacity 0.25s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
+        <div style="position:absolute;bottom:10px;left:12px;right:12px;font-size:11px;color:#fff;font-weight:600;opacity:0;transition:opacity 0.25s;" id="gcap-${i}">${g.cap}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:999;align-items:center;justify-content:center;flex-direction:column;">
+  <div style="position:absolute;top:20px;right:24px;display:flex;gap:12px;align-items:center;">
+    <span id="lb-counter" style="font-size:13px;color:rgba(255,255,255,0.5);font-family:'Rajdhani',sans-serif;font-weight:700;"></span>
+    <button onclick="closeLightbox()" style="background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;">✕</button>
+  </div>
+  <button onclick="lbPrev()" style="position:absolute;left:20px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:24px;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+  <img id="lb-img" src="" alt="" style="max-width:90vw;max-height:82vh;object-fit:contain;display:block;">
+  <div id="lb-cap" style="margin-top:16px;font-size:14px;color:rgba(255,255,255,0.65);font-weight:500;text-align:center;max-width:600px;"></div>
+  <button onclick="lbNext()" style="position:absolute;right:20px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:24px;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;">›</button>
+</div>`;
+}
+
+function pgSolutions(){
+  const sols=[
+    {key:'healthcare',cat:'Healthcare',title:'Hospital & Clinical Environments',items:[{t:'EN 81-76 Evacuation Mode',d:'Brings all lifts to designated floor for patient evacuation.'},{t:'Antibacterial Cab Interior',d:'All surfaces treated with permanent antibacterial coating.'},{t:'Extra-Wide 1,400mm Doors',d:'Full hospital bed and stretcher passage.'},{t:'Emergency UPS Power',d:'Continued operation during power failure for critical floors.'}],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg',ph:'linear-gradient(135deg,#0A1628,#064e6e)',sysKey:'hospital-elevator'},
+    {key:'commercial',cat:'Commercial',title:'Office Towers & Corporate Buildings',items:[{t:'AI Group Dispatching',d:'Intelligent algorithm minimises average waiting time.'},{t:'High Speed 2.5 m/s',d:'For buildings above 20 floors.'},{t:'Energy Recovery Drive',d:'VVVF regenerative system returns energy to grid.'},{t:'Premium Cab Finishes',d:'Stainless, titanium, mirror glass.'}],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Bangladesh-University-of-Pr.png',ph:'linear-gradient(135deg,#0A1628,#0B4DB8)',sysKey:'passenger-elevator'},
+    {key:'retail',cat:'Retail & Hospitality',title:'Shopping Malls, Hotels & Showrooms',items:[{t:'Commercial Escalators',d:'800–1000mm width, 6,000–9,000 persons/hour.'},{t:'Panoramic Glass Cabs',d:'360° or 180° glass systems for visual impact.'},{t:'High-Traffic Duty Cycle',d:'S4/S5 rated for continuous public operation.'},{t:'Aesthetic Customisation',d:'Custom colours, lighting scenes, and cab geometry.'}],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Kangaroo-Convocation-Center.png',ph:'linear-gradient(135deg,#1a0a00,#F28C28)',sysKey:'escalator'},
+    {key:'industrial',cat:'Industrial & Logistics',title:'Factories, Warehouses & Freight',items:[{t:'Up to 10,000 kg Payload',d:'Engineered for maximum industrial load.'},{t:'Forklift-Ready Platform',d:'Chequer plate floor, wide clearance gates.'},{t:'S5 Heavy Duty Cycle',d:'Up to 40% on-time for production line use.'},{t:'Hydraulic Drive Option',d:'Low pit and headroom for constrained sites.'}],img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png',ph:'linear-gradient(135deg,#1a0a00,#3d2000)',sysKey:'cargo-elevator'},
+  ];
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Industry-Specific Engineering</div>
+  <h1 class="page-hero-title">Solutions</h1>
+  <p class="page-hero-desc">Sector-specific system configurations — because the engineering requirements of a hospital are fundamentally different from an industrial warehouse or a luxury hotel.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Solutions</span></div>
+</div></div>
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="solutions-grid" style="margin-top:0;">
+      ${sols.map(s=>`
+      <div class="sol-card" onclick="nav('solutions/${s.key}')" style="min-height:360px;">
+        <div class="sol-bg"><img src="${s.img}" alt="${s.title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="sol-bg-color" style="display:none;background:${s.ph}"></div></div>
+        <div class="sol-overlay"></div>
+        <div class="sol-content">
+          <div class="sol-category">${s.cat}</div>
+          <h3 class="sol-title">${s.title}</h3>
+          <div class="sol-items">${s.items.map(i=>`<span class="sol-item">${i.t}</span>`).join('')}</div>
+        </div>
+        <div class="sol-arrow"><svg viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4"/></svg></div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>`;
+}
+
+function pgSolutionDetail(key){
+  const solMap={
+    healthcare:{cat:'Healthcare',title:'Hospital & Clinical Systems',desc:'Vertical transport in healthcare environments is a life-safety system — not a convenience. Every specification from door width to emergency power is engineered around patient safety and clinical workflow.',sysKey:'hospital-elevator',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/ADDIN-1.jpeg',ph:'linear-gradient(135deg,#0A1628,#064e6e)',items:[{t:'EN 81-76 Evacuation Compliant',d:'Fire-recall mode returns all lifts to designated evacuation floor and holds doors open for patient transport.'},{t:'Antibacterial Surfaces',d:'Permanent antibacterial treatment on all cab surfaces — 99.9% bacterial load reduction.'},{t:'Extra-Wide Doors 1,100–1,400mm',d:'Full hospital bed passage, stretcher access, and wheelchair clearance without manoeuvre.'},{t:'Emergency UPS Battery',d:'Continues operation during power failure — critical for ICU, theatre, and high-dependency units.'},{t:'Smooth Levelling ±2mm',d:'Prevents IV-line displacement and patient discomfort during floor-to-floor transport.'},{t:'Low-Height Control Panels',d:'Accessible to patients in beds and wheelchair users — positioned at stretcher level.'}]},
+    commercial:{cat:'Commercial',title:'Office Towers & Corporate',desc:'High-rise commercial buildings require intelligent group dispatching, energy recovery, and cab finishes that project the organisation\'s identity. Performance and aesthetics operate at equal priority.',sysKey:'passenger-elevator',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Bangladesh-University-of-Pr.png',ph:'linear-gradient(135deg,#0A1628,#0B4DB8)',items:[{t:'AI Group Dispatching',d:'Machine-learning-based dispatching minimises average waiting time and energy consumption.'},{t:'High Speed 2.5 m/s',d:'For buildings above 20 floors — reduces travel time between ground and top floor to under 30 seconds.'},{t:'Regenerative Energy Drive',d:'Recovers electrical energy during descent and deceleration — returns to building grid.'},{t:'Premium Interior Options',d:'Titanium, mirror glass, custom lighting — designed to match corporate identity standards.'},{t:'Destination Control System',d:'Passengers enter floor at lobby, reducing cab stops by 30% and improving efficiency.'},{t:'Remote Monitoring',d:'Building management system integration for real-time lift status, fault alerts, and energy reporting.'}]},
+    retail:{cat:'Retail & Hospitality',title:'Malls, Hotels & Showrooms',desc:'Public-facing spaces require simultaneous deployment of escalators for primary pedestrian flow and architectural elevators for aesthetic continuity. High throughput, low downtime.',sysKey:'escalator',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Kangaroo-Convocation-Center.png',ph:'linear-gradient(135deg,#1a0a00,#F28C28)',items:[{t:'Commercial Escalators',d:'1,000mm step width, 0.5 m/s, 9,000 persons/hour throughput. EN 115-1 certified.'},{t:'Panoramic Glass Cabs',d:'Architectural glass elevators integrated into atria and lobby spaces.'},{t:'High-Duty Cycle S4/S5',d:'Rated for continuous public operation up to 40% on-time.'},{t:'Skirt Brush Safety',d:'Anti-entrapment along skirt panels — mandatory in public commercial environments.'},{t:'Custom Balustrade Design',d:'Glass and stainless steel balustrade options matched to interior design specification.'},{t:'Night-Mode Energy Saving',d:'Sleep mode with motion activation during low-traffic hours — 60% energy saving.'}]},
+    industrial:{cat:'Industrial & Logistics',title:'Factories & Warehouses',desc:'Industrial vertical transport must withstand continuous heavy-load operation, forklift access, and harsh environments. Engineering is defined by structural integrity, not aesthetics.',sysKey:'cargo-elevator',img:'https://www.euroelevator-bd.com/wp-content/uploads/2023/11/AKIJ-JUTE-MILL-1.png',ph:'linear-gradient(135deg,#1a0a00,#3d2000)',items:[{t:'Payload to 10,000 kg',d:'Structural design with engineered safety factor of 1.5× rated load. Custom platform dimensions.'},{t:'Forklift-Ready Platform',d:'Chequer plate steel, full forklift entry clearance, rated for eccentric pallet loading.'},{t:'S5 Duty Cycle',d:'Up to 40% on-time — suited for continuous production line integration.'},{t:'Bi-Fold Industrial Doors',d:'Electric bi-fold or collapsible gates with full-height clearance for pallet trucks.'},{t:'Hydraulic Drive Option',d:'Minimal pit depth and headroom — ideal for constrained industrial site layouts.'},{t:'Overload Protection',d:'Calibrated load cell prevents departure above rated capacity with alarm relay output.'}]},
+  };
+  const s=solMap[key];if(!s)return pgSolutions();
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">${s.cat}</div>
+  <h1 class="page-hero-title">${s.title}</h1>
+  <p class="page-hero-desc">${s.desc}</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span onclick="nav('solutions')">Solutions</span><span class="breadcrumb-sep">›</span><span>${s.cat}</span></div>
+</div></div>
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="sol-detail-grid">
+      ${s.items.map((it,i)=>`
+      <div class="sol-detail-item reveal reveal-d${(i%2)+1}">
+        <div class="sol-detail-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="sol-detail-title">${it.t}</div>
+        <div class="sol-detail-desc">${it.d}</div>
+      </div>`).join('')}
+    </div>
+    <div style="display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;">
+      <a onclick="nav('systems/${s.sysKey}')" class="btn btn-blue" style="cursor:pointer;">View System Specifications</a>
+      <a onclick="nav('contact')" class="btn btn-orange" style="cursor:pointer;">Request Quotation</a>
+    </div>
+  </div>
+</section>`;
+}
+
+function pgConfigurator(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Engineering Decision Tool</div>
+  <h1 class="page-hero-title">System Configurator</h1>
+  <p class="page-hero-desc">Input your building parameters and receive a precise system recommendation — capacity, speed, drive type, units required, and compliance classification. No sales pressure. Engineering logic.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>System Configurator</span></div>
+</div></div>
+<section class="configurator-section" style="min-height:80vh;">
+  <div class="container">
+    <div class="configurator-inner">
+      <div class="configurator-desc">
+        <div class="eyebrow" style="color:var(--orange);">How It Works</div>
+        <h2 class="section-title section-title-white">Four Parameters.<br>One Precise Output.</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.82;margin-top:16px;">The configurator processes building type, floor count, and usage intensity against our full product specification database to generate system type, speed class, capacity range, recommended unit count, and machine room requirement.</p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:0;border:1px solid rgba(255,255,255,0.08);">
+          ${[
+            {n:'01',t:'Building Type',d:'Defines base system category and compliance requirements'},
+            {n:'02',t:'Floor Count',d:'Determines speed classification and machine room type'},
+            {n:'03',t:'Usage Pattern',d:'Sets duty cycle and number of units required'},
+            {n:'04',t:'Output',d:'System, capacity, speed, units, machine room, compliance'},
+          ].map(s=>`
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:rgba(255,255,255,0.2);flex-shrink:0;width:32px;">${s.n}</div>
+            <div><div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;">${s.t}</div><div style="font-size:12px;color:rgba(255,255,255,0.45);">${s.d}</div></div>
+          </div>`).join('')}
+        </div>
+        <div style="margin-top:24px;font-size:12px;color:rgba(255,255,255,0.35);line-height:1.7;">Configurator output is a guideline recommendation. Final specification requires site survey and engineering review.</div>
+      </div>
+      <div class="configurator-panel" style="padding:40px 48px;">
+        <div class="cfg-title">System Configuration Engine · v5.0</div>
+        <div class="cfg-group">
+          <div class="cfg-label">01 · Building Type</div>
+          <div class="cfg-options">
+            <div class="cfg-opt" onclick="cfgSelect('residential',this,'building')">Residential</div>
+            <div class="cfg-opt" onclick="cfgSelect('commercial',this,'building')">Commercial Office</div>
+            <div class="cfg-opt" onclick="cfgSelect('hospital',this,'building')">Hospital / Clinic</div>
+            <div class="cfg-opt" onclick="cfgSelect('mall',this,'building')">Mall / Retail</div>
+            <div class="cfg-opt" onclick="cfgSelect('industrial',this,'building')">Factory / Warehouse</div>
+            <div class="cfg-opt" onclick="cfgSelect('villa',this,'building')">Home / Villa</div>
+          </div>
+        </div>
+        <div class="cfg-group">
+          <div class="cfg-label">02 · Number of Floors</div>
+          <div class="cfg-floor-wrap">
+            <button class="cfg-floor-btn" onclick="cfgFloor(-1)">−</button>
+            <input class="cfg-floor-input" type="number" id="cfg-floor" value="10" min="2" max="60" oninput="cfgFloorInput(this.value)">
+            <button class="cfg-floor-btn" onclick="cfgFloor(1)">+</button>
+            <span style="font-size:13px;color:rgba(255,255,255,0.45);margin-left:8px;">floors</span>
+          </div>
+        </div>
+        <div class="cfg-group">
+          <div class="cfg-label">03 · Usage Intensity</div>
+          <div class="cfg-options">
+            <div class="cfg-opt" onclick="cfgSelect('light',this,'usage')">Light (Private)</div>
+            <div class="cfg-opt" onclick="cfgSelect('medium',this,'usage')">Medium (Office)</div>
+            <div class="cfg-opt" onclick="cfgSelect('heavy',this,'usage')">Heavy (Commercial)</div>
+            <div class="cfg-opt" onclick="cfgSelect('critical',this,'usage')">Critical / 24/7</div>
+          </div>
+        </div>
+        <div class="cfg-result" id="cfg-result" style="margin-top:24px;"><div class="cfg-result-empty">Complete parameters above to generate system configuration.</div></div>
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+          <a onclick="nav('contact')" class="btn btn-orange" style="cursor:pointer;flex:1;justify-content:center;font-size:13px;">Request Detailed Proposal</a>
+          <a href="tel:+8801817291551" class="btn btn-ghost" style="font-size:13px;">📞 Consult Engineer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+function pgDownloads(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Technical Documentation</div>
+  <h1 class="page-hero-title">Downloads</h1>
+  <p class="page-hero-desc">Product catalogues, technical specifications, compliance certificates, and installation guides — for engineers, architects, and procurement teams.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Downloads</span></div>
+</div></div>
+<section class="download-section section-pad">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Document Library</div>
+      <h2 class="section-title">Technical <span class="accent">Reference Library</span></h2>
+    </div>
+    <div class="download-grid">
+      ${[
+        {icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',t:'Product Catalogues',desc:'Complete product range catalogues including specifications, cab finish options, and dimensional data.',files:['Euro Elevator Product Catalogue 2024','Escalator Technical Catalogue','Generator Systems Catalogue']},
+        {icon:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',t:'Technical Specifications',desc:'Engineering drawings, load calculations, shaft dimension guides, and installation requirements.',files:['Shaft Dimension Guide — Passenger Lifts','Machine Room Layout Requirements','Electrical Supply Specifications']},
+        {icon:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',t:'Certifications',desc:'Manufacturer certifications, EN 81 compliance documentation, ISO certificates, and BEELIA membership.',files:['EN 81-20/50 Compliance Certificate','ISO 9001 Manufacturing Certificate','BEELIA Membership 2024']},
+        {icon:'<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>',t:'Installation Guides',desc:'Step-by-step installation procedures, safety checklists, and commissioning test records.',files:['Pre-Installation Checklist','Commissioning Test Record Form','Safety Inspection Protocol']},
+        {icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',t:'AMC Templates',desc:'Annual Maintenance Contract templates, service schedule formats, and emergency response protocols.',files:['Standard AMC Agreement Template','Quarterly Service Schedule','Emergency Response Protocol']},
+        {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>',t:'Project References',desc:'Selected case study documentation for completed installations across Bangladesh.',files:['Addin Hospital Case Study','Oparajita Tower Project Report','Akij Industrial Installation Record']},
+      ].map((d,i)=>`
+      <div class="dl-card reveal reveal-d${(i%3)+1}">
+        <div class="dl-icon"><svg viewBox="0 0 24 24">${d.icon}</svg></div>
+        <div class="dl-title">${d.t}</div>
+        <div class="dl-desc">${d.desc}</div>
+        <div class="dl-files">
+          ${d.files.map(f=>`<div class="dl-file"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>${f}</div>`).join('')}
+        </div>
+      </div>`).join('')}
+    </div>
+
+    <!-- BEELIA Certificate -->
+    <div class="reveal" style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;background:var(--gray-bg);border:1px solid var(--border);padding:40px;">
+      <div>
+        <div class="eyebrow">Official Credentials</div>
+        <h3 class="section-title" style="font-size:28px;">BEELIA Membership<br><span class="accent">Certificate 2024</span></h3>
+        <p style="font-size:14px;color:var(--text-md);line-height:1.78;margin-top:12px;">Euro Elevator (BD) Ltd. is a registered member of the Bangladesh Elevator, Escalator & Lift Industry Association — the official industry body governing elevator engineering standards in Bangladesh.</p>
+      </div>
+      <div style="text-align:center;">
+        <img src="https://www.euroelevator-bd.com/wp-content/uploads/2024/07/MEMBERSHIP-CRETIFICATE-BEELIA-2024.jpg" alt="BEELIA Membership Certificate 2024" style="max-width:100%;border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.1);" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:24px;background:var(--gray-bg);border:1px solid var(--border);padding:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <div><div style="font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px;">Need specific documentation?</div><div style="font-size:14px;color:var(--text-md);">Contact our technical team for custom specification sheets or project-specific documentation.</div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="mailto:info@euroelevator-bd.com" class="btn btn-blue">Email Technical Team</a>
+        <a onclick="nav('contact')" class="btn btn-outline-blue" style="cursor:pointer;">Submit Document Request</a>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+function pgAbout(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Est. April 2004 · Trademark Registered · BEELIA Member</div>
+  <h1 class="page-hero-title">Company</h1>
+  <p class="page-hero-desc">Twenty-one years of precision engineering — from a single-office operation in Uttara to Bangladesh's nationally recognised vertical systems company.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Company</span></div>
+</div></div>
+
+<div class="footprint" style="border-top:none;">
+  <div class="footprint-grid container">
+    ${[{n:'1000',sup:'+',l:'Systems Installed',bar:88},{n:'21',sup:'yrs',l:'In Operation',bar:100},{n:'3',sup:'',l:'Office Locations',bar:40},{n:'500',sup:'+',l:'Active Clients',bar:64},{n:'30',sup:'+',l:'Escalators',bar:60}].map(f=>`
+    <div class="footprint-cell">
+      <div class="footprint-num"><span data-count="${f.n}">0</span><span>${f.sup}</span></div>
+      <div class="footprint-label">${f.l}</div>
+      <div class="footprint-bar"><div class="footprint-bar-fill" data-target="${f.bar}"></div></div>
+    </div>`).join('')}
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal-left">
+        <div class="eyebrow">Origin</div>
+        <h2 class="section-title">Founded on Precision.<br><span class="accent">Built on Delivery.</span></h2>
+        <p style="font-size:15px;color:var(--text-md);line-height:1.85;margin-top:18px;">Euro Elevator (BD) Ltd. was established in <strong>April 2004</strong> by <strong>Md. Eadul Haque</strong> in Uttara, Dhaka. The company began as a specialised elevator installation firm and has grown through two decades of consistent technical delivery into a nationally recognised vertical systems company.</p>
+        <p style="font-size:15px;color:var(--text-md);line-height:1.85;margin-top:16px;">Direct OEM partnerships with manufacturers in <strong>Turkey</strong> and <strong>China</strong> provide access to European-certified and ISO-certified systems. Three office locations — Uttara, Mirpur, and Rajshahi — support nationwide deployment and 24/7 maintenance response.</p>
+        <p style="font-size:15px;color:var(--text-md);line-height:1.85;margin-top:16px;">As a <strong>BEELIA member</strong> and <strong>trademark-registered</strong> engineering company, Euro Elevator operates within the full regulatory framework of Bangladesh's construction and infrastructure sector.</p>
+        <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;">
+          <a onclick="nav('contact')" class="btn btn-blue" style="cursor:pointer;">Request Consultation</a>
+          <a onclick="nav('installations')" class="btn btn-outline-blue" style="cursor:pointer;">View Installations</a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <img src="https://www.euroelevator-bd.com/wp-content/uploads/2023/11/Group-Picture-Of-Euro-Eleva-2020.jpg" alt="Euro Elevator Team" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;" onerror="this.style.background='linear-gradient(135deg,#0A1628,#0B4DB8)';this.style.minHeight='320px';this.removeAttribute('src')">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+          <div style="background:var(--navy);padding:18px;"><div style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--orange);line-height:1;">2004</div><div style="font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:.1em;text-transform:uppercase;margin-top:3px;">Established</div></div>
+          <div style="background:var(--blue);padding:18px;"><div style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:#fff;line-height:1;">BEELIA</div><div style="font-size:11px;color:rgba(255,255,255,0.65);letter-spacing:.1em;text-transform:uppercase;margin-top:3px;">Industry Member</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANAGEMENT TEAM -->
+<section class="section-pad" style="background:var(--gray-bg);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <div class="eyebrow" style="justify-content:center;">Leadership</div>
+      <h2 class="section-title" style="text-align:center;">Management <span class="accent">Team</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      ${MANAGEMENT.map((m,i)=>`
+      <div class="reveal reveal-d${i+1}" style="background:var(--white);border:1px solid var(--border);overflow:hidden;border-radius:2px;text-align:center;">
+        <div style="aspect-ratio:3/4;overflow:hidden;background:var(--gray-bg);">
+          <img src="${m.img}" alt="${m.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.style.display='none';this.parentElement.innerHTML+='<div style=\\'font-family:Rajdhani,sans-serif;font-size:48px;font-weight:700;color:var(--gray-mid);\\'>'+String.fromCharCode(65+${i})+'</div>'">
+        </div>
+        <div style="padding:20px 16px;">
+          <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:6px;">${m.name}</div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">${m.role}</div>
+          <p style="font-size:12.5px;color:var(--text-md);line-height:1.68;">${m.desc}</p>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION -->
+<section style="background:var(--gray-bg);">
+  <div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+    <div style="padding:48px;background:var(--navy);position:relative;overflow:hidden;"><div style="position:absolute;top:0;left:0;width:100%;height:3px;background:var(--orange);"></div><div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;">Mission</div><h3 style="font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px;">Deliver safe and reliable<br>vertical mobility systems.</h3><p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.8;">To provide building owners, developers, and occupants with world-class vertical transportation — combining international technology with local engineering expertise, on time and within specification.</p></div>
+    <div style="padding:48px;background:var(--blue);position:relative;overflow:hidden;"><div style="position:absolute;top:0;left:0;width:100%;height:3px;background:var(--orange);"></div><div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:12px;">Vision</div><h3 style="font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px;">Bangladesh's foremost<br>elevator engineering company.</h3><p style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.8;">To be the most trusted vertical systems company in Bangladesh — known for precision engineering, unmatched maintenance, and systems that operate without question throughout their designed lifespan.</p></div>
+  </div></div>
+</section>
+
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:12px;"><div class="eyebrow" style="justify-content:center;">Operational History</div><h2 class="section-title" style="text-align:center;">21 Years of <span class="accent">Milestones</span></h2></div>
+    <div class="timeline-wrap reveal">
+      <div class="timeline-line"></div>
+      ${TIMELINE.map((t,i)=>`
+      <div class="tl-item">
+        ${i%2===0?`<div class="tl-content"><div class="tl-year">${t.year}</div><div class="tl-event">${t.event}</div><div class="tl-detail">${t.detail}</div></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-empty"></div>`:
+        `<div class="tl-empty"></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-content"><div class="tl-year">${t.year}</div><div class="tl-event">${t.event}</div><div class="tl-detail">${t.detail}</div></div>`}
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--gray-bg);">
+  <div class="container">
+    <div class="reveal"><div class="eyebrow">Year-on-Year</div><h2 class="section-title">Annual Sales <span class="accent">Performance</span></h2><p class="section-desc">2004–2023 deployment volume by year. COVID-19 impact visible in 2020, recovery confirmed by 2021.</p></div>
+    <div id="prog-chart" class="reveal" style="margin-top:36px;max-width:720px;">
+      ${PROGRESS.map(p=>`<div class="progress-row"><div class="progress-year">${p.y}</div><div class="progress-track"><div class="progress-fill" data-target="${p.p}"></div></div><div class="progress-pct">${p.p}%</div></div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="reveal"><div class="eyebrow">Credentials</div><h2 class="section-title">Certifications & <span class="accent">Memberships</span></h2></div>
+    <div class="cert-grid">
+      ${[
+        {i:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',t:'BEELIA Member',d:'Bangladesh Elevator, Escalator & Lift Industry Association — active membership since 2021.'},
+        {i:'<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>',t:'Trademark Registered',d:'Government trademark-registered company under Bangladesh trademark law.'},
+        {i:'<polyline points="20 6 9 17 4 12"/>',t:'EN 81 Compliant Systems',d:'All elevator and escalator products meet EN 81-20/50 European safety standards.'},
+        {i:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',t:'ISO 9001 Partners',d:'Manufacturing partners hold ISO 9001:2015 quality certification for all products.'},
+        {i:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',t:'AMF Generator Certified',d:'Authorised supply of AMF-controlled diesel generators from Perkins, Cummins, and Volvo Penta.'},
+        {i:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',t:'BNBC Compliant',d:'All installations comply with Bangladesh National Building Code requirements.'},
+      ].map((c,i)=>`
+      <div class="cert-card reveal reveal-d${(i%3)+1}">
+        <div class="cert-icon"><svg viewBox="0 0 24 24">${c.i}</svg></div>
+        <div class="cert-title">${c.t}</div>
+        <div class="cert-desc">${c.d}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--navy);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal"><div class="eyebrow" style="justify-content:center;color:var(--orange);">Office Network</div><h2 class="section-title section-title-white">Three Offices. <span style="color:var(--orange);">One Standard.</span></h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      ${[
+        {t:'Head Office',n:'Uttara, Dhaka',a:'H#88, Lake Drive Road\nSector #7, Uttara\nDhaka – 1230',p:'+88 02 41091241'},
+        {t:'Mirpur Branch',n:'Mirpur, Dhaka',a:'DOHS Mirpur\nDhaka',p:'01817-291551'},
+        {t:'Rajshahi Branch',n:'Rajshahi',a:'Rajshahi\nBangladesh',p:'01817-291554'},
+      ].map((o,i)=>`
+      <div class="reveal reveal-d${i+1}" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);padding:28px;border-top:3px solid var(--orange);">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;">${o.t}</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;">${o.n}</div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.7;white-space:pre-line;margin-bottom:12px;">${o.a}</p>
+        <a href="tel:${o.p.replace(/\s/g,'')}" style="font-size:14px;font-weight:600;color:var(--orange);">${o.p}</a>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>`;
+}
+
+function pgContact(){
+  return `
+<div class="page-hero"><div class="container">
+  <div class="page-hero-kicker">Get in Touch</div>
+  <h1 class="page-hero-title">Contact</h1>
+  <p class="page-hero-desc">Engineering consultation, project quotation, or AMC enquiry — our team responds within 24 hours. For urgent maintenance: 24/7 hotline.</p>
+  <div class="breadcrumb"><span onclick="nav('home')">Home</span><span class="breadcrumb-sep">›</span><span>Contact</span></div>
+</div></div>
+<section class="section-pad" style="background:var(--gray-bg);">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="contact-info-block reveal">
+          <div class="contact-info-block-title"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg>Telephone</div>
+          <div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg><div class="contact-detail-text"><strong>Office Lines</strong>+88 02 41091241 · 41091242 · 41091243 · 41091244</div></div>
+          <div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><div class="contact-detail-text"><strong>24/7 Hotline</strong>01817-291551 · 01817-291554</div></div>
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+            <a href="tel:+8801817291551" class="btn btn-blue" style="padding:10px 18px;font-size:13px;">📞 Call Now</a>
+            <a href="https://wa.me/8801817291551" target="_blank" class="btn btn-orange" style="padding:10px 18px;font-size:13px;background:#25D366;border-color:#25D366;">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-info-block reveal reveal-d1">
+          <div class="contact-info-block-title"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</div>
+          <div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg><div class="contact-detail-text"><strong>General</strong><a href="mailto:info@euroelevator-bd.com" style="color:var(--blue);">info@euroelevator-bd.com</a></div></div>
+          <div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg><div class="contact-detail-text"><strong>Sales</strong><a href="mailto:sales@euroelevator-bd.com" style="color:var(--blue);">sales@euroelevator-bd.com</a></div></div>
+        </div>
+        <div class="contact-info-block reveal reveal-d2">
+          <div class="contact-info-block-title"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Offices</div>
+          <div class="office-tabs">
+            <div class="office-tab active" onclick="switchOffice(0,this)">Head Office</div>
+            <div class="office-tab" onclick="switchOffice(1,this)">Mirpur</div>
+            <div class="office-tab" onclick="switchOffice(2,this)">Rajshahi</div>
+          </div>
+          <div id="off-0"><div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="contact-detail-text"><strong>Uttara, Dhaka</strong>H#88, Lake Drive Road, Sector #7<br>Uttara, Dhaka – 1230<br>Sat–Thu: 9:00 AM – 5:00 PM</div></div><div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.174!2d90.3984!3d23.8741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c717bebebbe9%3A0x28e1a5d545498c38!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1680000000000" allowfullscreen loading="lazy"></iframe></div></div>
+          <div id="off-1" style="display:none;"><div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="contact-detail-text"><strong>Mirpur Branch, Dhaka</strong>Contact: 01817-291551</div></div></div>
+          <div id="off-2" style="display:none;"><div class="contact-detail"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="contact-detail-text"><strong>Rajshahi Branch</strong>Contact: 01817-291554</div></div></div>
+        </div>
+        <div class="contact-info-block reveal reveal-d3" style="background:var(--orange);border:none;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:8px;">Office Hours</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="background:rgba(0,0,0,0.15);padding:12px;"><div style="font-weight:700;color:#fff;font-size:14px;">Sat – Thu</div><div style="color:rgba(255,255,255,0.85);font-size:13px;margin-top:2px;">9:00 AM – 5:00 PM</div></div>
+            <div style="background:rgba(0,0,0,0.25);padding:12px;"><div style="font-weight:700;color:#fff;font-size:14px;">Emergency</div><div style="color:rgba(255,255,255,0.85);font-size:13px;margin-top:2px;">24/7 Hotline</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal reveal-d1">
+        <h2 class="contact-form-title">Request for Quotation</h2>
+        <div class="contact-form-sub">Complete project details — engineering team responds within 48 hours with full proposal.</div>
+        <div id="rfq-body">
+          <div class="form-row">
+            <div class="form-group"><label>Name *</label><input type="text" id="rfq-name" placeholder="Full name"></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" id="rfq-phone" placeholder="+88 01X XX XXX XXX"></div>
+          </div>
+          <div class="form-group"><label>Email</label><input type="email" id="rfq-email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Organisation</label><input type="text" placeholder="Company or building name"></div>
+          <div class="form-group"><label>System Required *</label>
+            <select id="rfq-sys">
+              <option value="">— Select system —</option>
+              <option>Passenger Elevator</option><option>Panoramic Elevator</option><option>Hospital / Bed Lift</option>
+              <option>Cargo / Freight Elevator</option><option>Home / Villa Lift</option><option>Escalator</option>
+              <option>Generator</option><option>Annual Maintenance Contract</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Building Type</label><select><option value="">— Select —</option><option>Residential</option><option>Commercial Office</option><option>Hospital</option><option>Industrial</option><option>Educational</option><option>Government</option><option>Mixed Use</option></select></div>
+            <div class="form-group"><label>Floors</label><input type="number" id="rfq-floors" placeholder="e.g. 12" min="2"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Number of Units</label><select><option value="">— Select —</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+            <div class="form-group"><label>Project Location</label><input type="text" placeholder="City / Area"></div>
+          </div>
+          <div class="form-group"><label>Additional Requirements</label><textarea id="rfq-notes" placeholder="Load capacity, speed, cab finish, timeline, budget range..."></textarea></div>
+          <div class="form-actions"><button onclick="submitRFQ()" class="btn btn-orange" style="flex:1;justify-content:center;border:none;cursor:pointer;font-size:14px;padding:15px;">Submit Quotation Request <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg></button></div>
+          <div style="text-align:center;margin-top:14px;font-size:12px;color:var(--text-lt);">Or: <a href="tel:+8801817291551" style="color:var(--blue);font-weight:600;">01817-291551</a> · <a href="mailto:sales@euroelevator-bd.com" style="color:var(--blue);">sales@euroelevator-bd.com</a></div>
+        </div>
+        <div class="form-success" id="rfq-success" style="display:none;">
+          <div class="form-success-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Quotation Request Received</h3>
+          <p>Our engineering team will contact you within <strong>48 hours</strong>.<br><br>Urgent: <a href="tel:+8801817291551" style="color:var(--blue);font-weight:600;">01817-291551</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+/* ══ INTERACTIONS ══ */
+function filterSys(badge,btn){
+  document.querySelectorAll('#sys-filter .proj-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#sys-grid .system-tile').forEach(t=>{
+    t.style.display=(badge==='all'||t.dataset.badge===badge)?'':'none';
+  });
+}
+function filterProj(cat,btn,gridId){
+  const filterEl=btn.closest('#inst-filter')||btn.closest('[id*="filter"]');
+  if(filterEl)filterEl.querySelectorAll('.proj-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#'+gridId+' .proj-page-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+}
+function switchOffice(idx,btn){
+  btn.parentElement.querySelectorAll('.office-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  [0,1,2].forEach(i=>{const el=document.getElementById('off-'+i);if(el)el.style.display=i===idx?'block':'none';});
+}
+function submitQF(){
+  const n=document.getElementById('qf-name')?.value.trim();
+  const p=document.getElementById('qf-phone')?.value.trim();
+  const s=document.getElementById('qf-sys')?.value;
+  if(!n||!p||!s){alert('Please fill Name, Phone and System.');return;}
+  document.getElementById('home-qf').style.display='none';
+  document.getElementById('home-qf-success').style.display='block';
+}
+function submitRFQ(){
+  const n=document.getElementById('rfq-name')?.value.trim();
+  const p=document.getElementById('rfq-phone')?.value.trim();
+  const s=document.getElementById('rfq-sys')?.value;
+  if(!n||!p||!s){alert('Please fill Name, Phone and System Required.');return;}
+  document.getElementById('rfq-body').style.display='none';
+  document.getElementById('rfq-success').style.display='block';
+}
+function toggleMobile(force){
+  const m=document.getElementById('mobile-menu');
+  if(force===false){m.classList.remove('open');}else{m.classList.toggle('open');}
+}
+
+/* ── LIGHTBOX ── */
+let lbIdx=0;
+function openLightbox(i){
+  lbIdx=i;
+  const lb=document.getElementById('lightbox');
+  if(!lb)return;
+  lb.style.display='flex';
+  document.body.style.overflow='hidden';
+  updateLb();
+}
+function closeLightbox(){
+  const lb=document.getElementById('lightbox');
+  if(lb){lb.style.display='none';}
+  document.body.style.overflow='';
+}
+function lbNext(){lbIdx=(lbIdx+1)%GALLERY_IMGS.length;updateLb();}
+function lbPrev(){lbIdx=(lbIdx-1+GALLERY_IMGS.length)%GALLERY_IMGS.length;updateLb();}
+function updateLb(){
+  const img=document.getElementById('lb-img');
+  const cap=document.getElementById('lb-cap');
+  const ctr=document.getElementById('lb-counter');
+  if(img)img.src=GALLERY_IMGS[lbIdx].img;
+  if(cap)cap.textContent=GALLERY_IMGS[lbIdx].cap;
+  if(ctr)ctr.textContent=`${lbIdx+1} / ${GALLERY_IMGS.length}`;
+}
+document.addEventListener('keydown',e=>{
+  const lb=document.getElementById('lightbox');
+  if(!lb||lb.style.display==='none')return;
+  if(e.key==='ArrowRight')lbNext();
+  if(e.key==='ArrowLeft')lbPrev();
+  if(e.key==='Escape')closeLightbox();
+});
+
+/* ══ INIT SCRIPTS ══ */
+function initScripts(){
+  // Scroll Reveal
+  const revObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});
+  },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revObs.observe(el));
+
+  // Counters
+  function animCount(el,target,dur){
+    const s=performance.now();
+    const up=(now)=>{
+      const p=Math.min((now-s)/dur,1);
+      const ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(ease*target);
+      if(p<1)requestAnimationFrame(up);else el.textContent=target;
+    };
+    requestAnimationFrame(up);
+  }
+  const cntObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){animCount(e.target,parseInt(e.target.dataset.count),1800);cntObs.unobserve(e.target);}});
+  },{threshold:0.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cntObs.observe(el));
+
+  // Footprint bars + progress bars
+  const barObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('[data-target]').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.target+'%';},100);});
+        e.target.querySelectorAll('.progress-fill').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.target+'%';},100);});
+        e.target.querySelectorAll('.map-city-bar-fill').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.target+'%';},100);});
+        barObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.15});
+  document.querySelectorAll('.footprint,.footprint-grid,#prog-chart,.map-cities').forEach(el=>{if(el)barObs.observe(el);});
+
+  // Sticky nav
+  const hdr=document.getElementById('site-header');
+  if(hdr){const onScroll=()=>{hdr.style.boxShadow=window.scrollY>8?'0 4px 24px rgba(0,0,0,0.13)':'0 2px 12px rgba(0,0,0,0.06)';};window.addEventListener('scroll',onScroll,{passive:true});}
+}
+</script>
+</body>
+</html>
